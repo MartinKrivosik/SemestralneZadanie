@@ -1,0 +1,61 @@
+/* MENU STYLE */
+
+.container .row{
+    height: 50vh;
+}
+
+.start button, .rules button{
+    height: 10vh;
+    width: 30vw;
+}
+
+/* SETUP STYLE */
+
+
+#teams, #difficulty{
+    width: 50%;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.player{
+    border: 1px solid black;
+    width: 100px;
+}
+
+label{
+    font-size: 20px;
+}
+
+
+/* GAME STYLE*/
+
+/* Scoreboard */
+#scoreboard{
+    font-size: 24px;
+}
+
+#scoreboard img{
+    height: 50px;
+}
+
+
+/* Question */
+#question{
+    border: 1px solid black;
+    height: 40vh;
+    display: table;
+}
+
+#question h2 {
+    display:table-cell;
+    vertical-align:middle
+}
+
+
+/* Answers */
+.answers button{
+    height: 10vh;
+    width: 30vw;
+}
