@@ -12,7 +12,7 @@
 /* SETUP STYLE */
 
 
-#teams, #difficulty{
+.teams, #difficulty{
     width: 50%;
     height: 50px;
     display: block;
