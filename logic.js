@@ -8,7 +8,6 @@ const oteam = document.getElementById("opponentteam");
 
 pteam.addEventListener('change', function() {
 	for(let i = 0; i < oteam.length; i++){
-		console.log(oteam[i])
 	  if(oteam[i].value == pteam.value){
 		oteam[i].disabled = true;
 	  } else{
