@@ -6,6 +6,7 @@ var teams = await fetch('../json/questions.json').then(r=>r.json())
 if (document.body.className == "setup"){
 	const pteam = document.getElementById("playerteam");
 	const oteam = document.getElementById("opponentteam");
+	const holders = document.querySelectorAll('.player h3')
 	
 	let playerTeam = "argentina"
 	let enemyTeam = "france"
@@ -19,6 +20,9 @@ if (document.body.className == "setup"){
 			oteam[i].disabled = false;
 		  }
 		}
+		for(let j = 0; j < players[playerTeam].length - 1; j++){
+            holders[j].innerHTML = players[playerTeam][j].name;
+        }
 	});
 	
 	oteam.addEventListener('change', function() {
