@@ -65,7 +65,7 @@ if (document.body.className == "game"){
 	const activeB = document.getElementById("TeamBActive")
 	
 	const modal = new bootstrap.Modal( document.getElementById("exampleModal"))
-	
+	const title = document.getElementById("modalTitle")
 	
 	let options;
 	let answer;
@@ -113,14 +113,25 @@ if (document.body.className == "game"){
 	
 	}
 	
+	function endGame(){
+		if (parseInt(scoreA.textContent) > parseInt(scoreB.textContent)){
+			title.textContent = "Pog, u won"
+		}
+		else if (parseInt(scoreA.textContent) < parseInt(scoreB.textContent)){
+			title.textContent = "Sadge, u lost"
+		}
+		else{
+			title.textContent = "remiza po penaltach, wtf???"
+		}
+		modal.show()
+	}
+
 	setupQuestion()
 	answerA.addEventListener("click", function(){
-	
 		if (turn == "player"){
 			if(answerA.textContent == players[playerTeam][playerNumber][answer]){
 				answerA.style.background = "green"
 				scoreA.textContent = parseInt(scoreA.textContent)+1
-				//modal.show()
 			}
 			else{
 				answerA.style.background = "red"
@@ -129,7 +140,6 @@ if (document.body.className == "game"){
 		else{
 			if(answerA.textContent == teams[enemyTeam][index].answer){
 				answerA.style.background = "green"
-				//modal.show()
 			}
 			else{
 				scoreB.textContent = parseInt(scoreB.textContent)+1
@@ -144,15 +154,18 @@ if (document.body.className == "game"){
 			turn = "player"
 			playerNumber++
 		}
-		setTimeout(setupQuestion, 1500);
+		if(turnNumber == 5){
+			setTimeout(endGame, 500)
+		}
+		else{
+			setTimeout(setupQuestion, 500)
+		}
 	})
 	answerB.addEventListener("click", function(){
 		if (turn == "player"){
 			if(answerB.textContent == players[playerTeam][playerNumber][answer]){
 				answerB.style.background = "green"
 				scoreA.textContent = parseInt(scoreA.textContent)+1
-				
-				//modal.show()
 			}
 			else{
 				answerB.style.background = "red"
@@ -161,8 +174,6 @@ if (document.body.className == "game"){
 		else{
 			if(answerB.textContent == teams[enemyTeam][index].answer){
 				answerB.style.background = "green"
-				
-				//modal.show()
 			}
 			else{
 				scoreB.textContent = parseInt(scoreB.textContent)+1
@@ -177,15 +188,18 @@ if (document.body.className == "game"){
 			turn = "player"
 			playerNumber++
 		}
-		setTimeout(setupQuestion, 1500);
+		if(turnNumber == 5){
+			setTimeout(endGame, 500)
+		}
+		else{
+			setTimeout(setupQuestion, 500)
+		}
 	})
 	answerC.addEventListener("click", function(){
 		if (turn == "player"){
 			if(answerC.textContent == players[playerTeam][playerNumber][answer]){
 				answerC.style.background = "green"
 				scoreA.textContent = parseInt(scoreA.textContent)+1
-				
-				//modal.show()
 			}
 			else{
 				answerC.style.background = "red"
@@ -194,8 +208,6 @@ if (document.body.className == "game"){
 		else{
 			if(answerC.textContent == teams[enemyTeam][index].answer){
 				answerC.style.background = "green"
-				
-				//modal.show()
 			}
 			else{
 				scoreB.textContent = parseInt(scoreB.textContent)+1
@@ -210,14 +222,18 @@ if (document.body.className == "game"){
 			turn = "player"
 			playerNumber++
 		}
-		setTimeout(setupQuestion, 1500);
+		if(turnNumber == 5){
+			setTimeout(endGame, 500)
+		}
+		else{
+			setTimeout(setupQuestion, 500)
+		}
 	})
 	answerD.addEventListener("click", function(){
 		if (turn == "player"){
 			if(answerD.textContent == players[playerTeam][playerNumber][answer]){
 				answerD.style.background = "green"
 				scoreA.textContent = parseInt(scoreA.textContent)+1
-				//modal.show()
 			}
 			else{
 				answerD.style.background = "red"
@@ -226,7 +242,6 @@ if (document.body.className == "game"){
 		else{
 			if(answerD.textContent == teams[enemyTeam][index].answer){
 				answerD.style.background = "green"
-				//modal.show()
 			}
 			else{
 				scoreB.textContent = parseInt(scoreB.textContent)+1
@@ -241,8 +256,12 @@ if (document.body.className == "game"){
 			turn = "player"
 			playerNumber++
 		}
-		setTimeout(setupQuestion, 1500);
-	
+		if(turnNumber == 5){
+			setTimeout(endGame, 500)
+		}
+		else{
+			setTimeout(setupQuestion, 500)
+		}
 	})
 }
 
