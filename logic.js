@@ -24,6 +24,8 @@ const answerD = document.getElementById("answerD")
 const scoreA = document.getElementById("TeamAScore")
 const scoreB = document.getElementById("TeamBScore")
 
+const activeA = document.getElementById("TeamAActive")
+const activeB = document.getElementById("TeamBActive")
 
 const modal = new bootstrap.Modal( document.getElementById("exampleModal"))
 
@@ -33,9 +35,13 @@ let answer;
 let index;
 function setupQuestion(){
 	if (turn == "player"){
+		activeA.src = "../photos/ball.png"
+		activeB.src = "../photos/glove.png"
 		question.textContent = players[playerTeam][playerNumber][difficulty]
 	}
 	else{
+		activeA.src = "../photos/glove.png"
+		activeB.src = "../photos/ball.png"
 		index = Math.floor(Math.random() * teams[enemyTeam].length)
 		let randomQuestion = teams[enemyTeam][index]
 		question.textContent = randomQuestion.question
@@ -72,6 +78,11 @@ function setupQuestion(){
 
 setupQuestion()
 answerA.addEventListener("click", function(){
+
+	if (turnNumber == 5){
+		alert("Finish")
+	}
+
 	if (turn == "player"){
 		if(answerA.textContent == players[playerTeam][playerNumber][answer]){
 			answerA.style.background = "green"
@@ -91,6 +102,7 @@ answerA.addEventListener("click", function(){
 			scoreB.textContent = parseInt(scoreB.textContent)+1
 			answerA.style.background = "red"
 		}
+		turnNumber++
 	}
 	if (turn == "player"){
 		turn = "enemy"
@@ -123,6 +135,7 @@ answerB.addEventListener("click", function(){
 			scoreB.textContent = parseInt(scoreB.textContent)+1
 			answerB.style.background = "red"
 		}
+		turnNumber++
 	}
 	if (turn == "player"){
 		turn = "enemy"
@@ -155,6 +168,7 @@ answerC.addEventListener("click", function(){
 			scoreB.textContent = parseInt(scoreB.textContent)+1
 			answerC.style.background = "red"
 		}
+		turnNumber++
 	}
 	if (turn == "player"){
 		turn = "enemy"
@@ -185,6 +199,7 @@ answerD.addEventListener("click", function(){
 			scoreB.textContent = parseInt(scoreB.textContent)+1
 			answerD.style.background = "red"
 		}
+		turnNumber++
 	}
 	if (turn == "player"){
 		turn = "enemy"
