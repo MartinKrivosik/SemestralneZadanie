@@ -12,7 +12,7 @@ let enemyTeam = "france"
 let difficulty = "easy"
 let turn = Math.random() >= 0.5 ? "player" : "enemy";
 let playerNumber = 0;
-let enemyNumber = 0;
+let turnNumber = 0;
 
 
 const question = document.getElementById("questionText")
@@ -21,48 +21,62 @@ const answerB = document.getElementById("answerB")
 const answerC = document.getElementById("answerC")
 const answerD = document.getElementById("answerD")
 
+const scoreA = document.getElementById("TeamAScore")
+const scoreB = document.getElementById("TeamBScore")
+
+
 const modal = new bootstrap.Modal( document.getElementById("exampleModal"))
 
-let index = 0
-if (turn == "player"){
-	question.textContent = players[playerTeam][playerNumber][difficulty]
-}
-else{
-	index = Math.floor(Math.random() * teams[enemyTeam].length)
-	let randomQuestion = teams[enemyTeam][index]
-	question.textContent = randomQuestion.question
-}
 
 let options;
 let answer;
-if (difficulty == "easy"){
-    options = "optionse"
-    answer = "answere"
-}
-else{
-    options = "optionsh"
-    answer = "answerh"
+let index;
+function setupQuestion(){
+	if (turn == "player"){
+		question.textContent = players[playerTeam][playerNumber][difficulty]
+	}
+	else{
+		index = Math.floor(Math.random() * teams[enemyTeam].length)
+		let randomQuestion = teams[enemyTeam][index]
+		question.textContent = randomQuestion.question
+	}
+	
+	if (difficulty == "easy"){
+		options = "optionse"
+		answer = "answere"
+	}
+	else{
+		options = "optionsh"
+		answer = "answerh"
+	}
+	
+	let shuffledArray;
+	if (turn == "player"){
+		shuffledArray = players[playerTeam][playerNumber][options].sort((a, b) => 0.5 - Math.random());
+	}
+	else{
+		shuffledArray = teams[enemyTeam][index].options.sort((a, b) => 0.5 - Math.random()) 
+	}
+	
+	answerA.textContent = shuffledArray[0]
+	answerB.textContent = shuffledArray[1]
+	answerC.textContent = shuffledArray[2]
+	answerD.textContent = shuffledArray[3]
+
+	answerA.style.background = "transparent"
+	answerB.style.background = "transparent"
+	answerC.style.background = "transparent"
+	answerD.style.background = "transparent"
+
 }
 
-let shuffledArray;
-if (turn == "player"){
-	shuffledArray = players[playerTeam][playerNumber][options].sort((a, b) => 0.5 - Math.random());
-}
-else{
-	shuffledArray = teams[enemyTeam][index].options.sort((a, b) => 0.5 - Math.random()) 
-}
-
-answerA.textContent = shuffledArray[0]
-answerB.textContent = shuffledArray[1]
-answerC.textContent = shuffledArray[2]
-answerD.textContent = shuffledArray[3]
-
-
+setupQuestion()
 answerA.addEventListener("click", function(){
 	if (turn == "player"){
 		if(answerA.textContent == players[playerTeam][playerNumber][answer]){
 			answerA.style.background = "green"
-			modal.show()
+			scoreA.textContent = parseInt(scoreA.textContent)+1
+			//modal.show()
 		}
 		else{
 			answerA.style.background = "red"
@@ -71,18 +85,29 @@ answerA.addEventListener("click", function(){
 	else{
 		if(answerA.textContent == teams[enemyTeam][index].answer){
 			answerA.style.background = "green"
-			modal.show()
+			//modal.show()
 		}
 		else{
+			scoreB.textContent = parseInt(scoreB.textContent)+1
 			answerA.style.background = "red"
 		}
 	}
+	if (turn == "player"){
+		turn = "enemy"
+	}
+	else{
+		turn = "player"
+		playerNumber++
+	}
+	setTimeout(setupQuestion, 1500);
 })
 answerB.addEventListener("click", function(){
     if (turn == "player"){
 		if(answerB.textContent == players[playerTeam][playerNumber][answer]){
 			answerB.style.background = "green"
-			modal.show()
+			scoreA.textContent = parseInt(scoreA.textContent)+1
+			
+			//modal.show()
 		}
 		else{
 			answerB.style.background = "red"
@@ -91,18 +116,30 @@ answerB.addEventListener("click", function(){
 	else{
 		if(answerB.textContent == teams[enemyTeam][index].answer){
 			answerB.style.background = "green"
-			modal.show()
+			
+			//modal.show()
 		}
 		else{
+			scoreB.textContent = parseInt(scoreB.textContent)+1
 			answerB.style.background = "red"
 		}
 	}
+	if (turn == "player"){
+		turn = "enemy"
+	}
+	else{
+		turn = "player"
+		playerNumber++
+	}
+	setTimeout(setupQuestion, 1500);
 })
 answerC.addEventListener("click", function(){
     if (turn == "player"){
 		if(answerC.textContent == players[playerTeam][playerNumber][answer]){
 			answerC.style.background = "green"
-			modal.show()
+			scoreA.textContent = parseInt(scoreA.textContent)+1
+			
+			//modal.show()
 		}
 		else{
 			answerC.style.background = "red"
@@ -111,18 +148,29 @@ answerC.addEventListener("click", function(){
 	else{
 		if(answerC.textContent == teams[enemyTeam][index].answer){
 			answerC.style.background = "green"
-			modal.show()
+			
+			//modal.show()
 		}
 		else{
+			scoreB.textContent = parseInt(scoreB.textContent)+1
 			answerC.style.background = "red"
 		}
 	}
+	if (turn == "player"){
+		turn = "enemy"
+	}
+	else{
+		turn = "player"
+		playerNumber++
+	}
+	setTimeout(setupQuestion, 1500);
 })
 answerD.addEventListener("click", function(){
     if (turn == "player"){
 		if(answerD.textContent == players[playerTeam][playerNumber][answer]){
 			answerD.style.background = "green"
-			modal.show()
+			scoreA.textContent = parseInt(scoreA.textContent)+1
+			//modal.show()
 		}
 		else{
 			answerD.style.background = "red"
@@ -131,12 +179,23 @@ answerD.addEventListener("click", function(){
 	else{
 		if(answerD.textContent == teams[enemyTeam][index].answer){
 			answerD.style.background = "green"
-			modal.show()
+			//modal.show()
 		}
 		else{
+			scoreB.textContent = parseInt(scoreB.textContent)+1
 			answerD.style.background = "red"
 		}
 	}
+	if (turn == "player"){
+		turn = "enemy"
+	}
+	else{
+		turn = "player"
+		playerNumber++
+	}
+	setTimeout(setupQuestion, 1500);
+
 })
+
 
 ////////////////////////////////////////////////////////////////////////////////
