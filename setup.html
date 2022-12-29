@@ -19,9 +19,10 @@
 <div class="row">
     <div class="col text-center">
         <div class="row">
-            <label for="teams">Tímy:</label>
+            <label for="teams">Váš tím:</label>
 
-            <select name="teams" id="teams">
+            <select name="teams" class="teams" id="player">
+                <option value="none" selected disabled hidden>---Vyberte si tím---</option>
                 <option value="arg">Argentína</option>
                 <option value="fra">Francúzsko</option>
                 <option value="cro">Chorvátsko</option>
@@ -30,9 +31,10 @@
         </div>
         <br>
         <div class="row">
-            <label for="teams">Súper:</label>
+            <label for="teams">Súperov tím:</label>
 
-            <select name="teams" id="teams">
+            <select name="teams" class="teams" id="opponent">
+                <option value="none" selected disabled hidden>---Vyberte súperov tím---</option>
                 <option value="arg">Argentína</option>
                 <option value="fra">Francúzsko</option>
                 <option value="cro">Chorvátsko</option>
@@ -44,6 +46,7 @@
             <label for="difficulty">Obtiažnosť:</label>
 
             <select name="difficulty" id="difficulty">
+                <option value="none" selected disabled hidden>---Vyberte si obtiažnosť---</option>
                 <option value="medium">Stredná</option>
                 <option value="hard">Ťažká</option>
             </select>
@@ -52,7 +55,7 @@
 </div>
 <br>
 <div class="row text-center">
-    <h2> Zorad hracov </h2>
+    <h2> Zoraďte si hráčov </h2>
 </div>
 <br>
 <div class="row text-center column-gap-3 ">
