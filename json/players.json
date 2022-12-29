@@ -6,7 +6,7 @@
             "optionse": ["Barcelona", "Inter Miami", "PSV", "PSG"],
             "answere": "PSG",
             "hard": "Koľko ocenení Ballon D'Or získal Lionel Messi?",
-            "opttionsh": ["6", "8", "5", "7"],
+            "optionsh": ["6", "8", "5", "7"],
             "answerh": "7",
             "image": 1,
             "path": 1
@@ -17,7 +17,7 @@
             "optionse": ["Juventus", "Lazio", "Atalanta", "AS Roma"],
             "answere": "AS Roma",
             "hard": "V akom veku skóroval Paulo Dybala svoj prvý gól v Serie A?",
-            "opttionsh": ["20", "16", "19", "18"],
+            "optionsh": ["20", "16", "19", "18"],
             "answerh": "18",
             "image": 1,
             "path": 1
