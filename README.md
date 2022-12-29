@@ -10,8 +10,8 @@ Dominik:
   
 Krivko:
   - - [ ] logika hry:
-    - - [ ] ukazat Q a A
-    - - [ ] ci je vybrana spravna odpoved
+    - - [x] ukazat Q a A
+    - - [x] ci je vybrana spravna odpoved
     - - [ ] pridat bod ak vybral spravnu
     - - [ ] koniec - modal
     - - [ ] 50/50 napoveda
