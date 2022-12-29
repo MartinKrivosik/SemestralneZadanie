@@ -2,6 +2,10 @@
 var players = await fetch('../json/players.json').then(r=>r.json())
 var teams = await fetch('../json/questions.json').then(r=>r.json())
 
+if (document.body.className == "game"){
+	console.log(1)
+}
+
 //setup teams
 const pteam = document.getElementById("playerteam");
 const oteam = document.getElementById("opponentteam");
@@ -37,7 +41,6 @@ let difficulty = "easy"
 let turn = Math.random() >= 0.5 ? "player" : "enemy";
 let playerNumber = 0;
 let turnNumber = 0;
-
 
 const question = document.getElementById("questionText")
 const answerA = document.getElementById("answerA")
@@ -102,10 +105,6 @@ function setupQuestion(){
 
 setupQuestion()
 answerA.addEventListener("click", function(){
-
-	if (turnNumber == 5){
-		alert("Finish")
-	}
 
 	if (turn == "player"){
 		if(answerA.textContent == players[playerTeam][playerNumber][answer]){
