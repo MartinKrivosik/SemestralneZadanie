@@ -14,7 +14,7 @@ const answerD = document.getElementById("answerD")
 
 const modal = new bootstrap.Modal( document.getElementById("exampleModal"))
 
-let answers = [players.argentina[0].opte[0], players.argentina[0].opte[1], players.argentina[0].opte[2], players.argentina[0].anse]
+let answers = [players.argentina[0].optionse[0], players.argentina[0].optionse[1], players.argentina[0].optionse[2], players.argentina[0].answere]
 let shuffledArray = answers.sort((a, b) => 0.5 - Math.random());
 
 answerA.textContent = answers[0]
@@ -23,7 +23,7 @@ answerC.textContent = answers[2]
 answerD.textContent = answers[3]
 
 answerA.addEventListener("click", function(){
-    if(answerA.textContent == players.argentina[0].anse){
+    if(answerA.textContent == players.argentina[0].answere){
         answerA.style.background = "green"
         modal.show()
     }
@@ -32,7 +32,7 @@ answerA.addEventListener("click", function(){
     }
 })
 answerB.addEventListener("click", function(){
-    if(answerB.textContent == players.argentina[0].anse){
+    if(answerB.textContent == players.argentina[0].answere){
         answerB.style.background = "green"
         modal.show()
     }
@@ -41,7 +41,7 @@ answerB.addEventListener("click", function(){
     }
 })
 answerC.addEventListener("click", function(){
-    if(answerC.textContent == players.argentina[0].anse){
+    if(answerC.textContent == players.argentina[0].answere){
         answerC.style.background = "green"
         modal.show()
     }
@@ -50,7 +50,7 @@ answerC.addEventListener("click", function(){
     }
 })
 answerD.addEventListener("click", function(){
-    if(answerD.textContent == players.argentina[0].anse){
+    if(answerD.textContent == players.argentina[0].answere){
         answerD.style.background = "green"
         modal.show()
     }
@@ -58,8 +58,5 @@ answerD.addEventListener("click", function(){
         answerD.style.background = "red"
     }
 })
-
-//data-bs-toggle="modal" data-bs-target="#exampleModal"
-
 
 console.log(teams)
