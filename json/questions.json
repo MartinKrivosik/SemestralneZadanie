@@ -2,128 +2,128 @@
     "argQ":[
         {
             "question": "Koľko trofejí MS má Argentína?",
-            "options": ["1", "2", "4"],
+            "options": ["1", "2", "4", "3"],
             "answer": "3"
         },
         {
             "question": "V ktorom roku prvý krát Argentína vyhrala MS?",
-            "options": ["1930", "1986", "1990"],
+            "options": ["1930", "1986", "1990", "1978"],
             "answer": "1978"
         },
         {
             "question": "Aký tím porazila Argentína vo finále MS 1986 s výsledkom 3:2?",
-            "options": ["Francúzsko", "Uruguay", "Holandsko"],
+            "options": ["Francúzsko", "Uruguay", "Holandsko", "Západné Nemecko"],
             "answer": "Západné Nemecko"
         },
         {
             "question": "Ktorý argentínsky hráč v roku 1978 získal na MS Golden Ball?",
-            "options": ["Leopoldo Luque", "Daniel Bertoni", "Oscar Ortiz"],
+            "options": ["Leopoldo Luque", "Daniel Bertoni", "Oscar Ortiz", "Mario Kempes"],
             "answer": "Mario Kempes"
         },
         {
             "question": "Kto v roku 1986 skóroval za Argentínu proti Anglicku gól takzvanou 'The hand of God'?",
-            "options": ["Héctor Enrique", "Jorge Burruchaga", "Jorge Valdano"],
+            "options": ["Héctor Enrique", "Jorge Burruchaga", "Jorge Valdano", "Diego Maradona"],
             "answer": "Diego Maradona"
         },
         {
             "question": "Koľko pokutových kopov v riadnom hracom čase kopal Lionel Messi na MS 2022?",
-            "options": ["4", "6", "3"],
+            "options": ["4", "6", "3", "5"],
             "answer": "5"
         }
     ],
     "fraQ":[
         {
             "question": "Koľko trofejí MS má Francúzsko?",
-            "options": ["1", "3", "4"],
+            "options": ["1", "3", "4", "2"],
             "answer": "2"
         },
         {
             "question": "V ktorom roku prvý krát Francúzsko vyhralo MS?",
-            "options": ["1982", "2006", "2018"],
+            "options": ["1982", "2006", "2018", "1998"],
             "answer": "1998"
         },
         {
             "question": "Aký tím porazilo Francúzsko vo finále MS 2018 s výsledkom 4:2?",
-            "options": ["Belgicko", "Anglicko", "Argentína"],
+            "options": ["Belgicko", "Anglicko", "Argentína", "Chorvátsko"],
             "answer": "Chorvátsko"
         },
         {
             "question": "Kto skóroval dva góly vo finále MS 1998 proti Brazílii pri výhre 3:0?",
-            "options": ["Emmanuel Petit", "Lilian Thuram", "Patrick Vieira"],
+            "options": ["Emmanuel Petit", "Lilian Thuram", "Patrick Vieira", "Zinedine Zidane"],
             "answer": "Zinedine Zidane"
         },
         {
             "question": "Kto je doposiaľ najlepším strelcom Francúzska na MS s 13 gólmi?",
-            "options": ["Kylian Mbappé", "Thierry Henry", "Olivier Giroud"],
+            "options": ["Kylian Mbappé", "Thierry Henry", "Olivier Giroud", "Just Fontaine"],
             "answer": "Just Fontaine"
         },
         {
             "question": "Kto odohral na MS najviac zápasov za Francúzsko?",
-            "options": ["Antoine Griezmann", "Raphaël Varane", "Michel Platini"],
+            "options": ["Antoine Griezmann", "Raphaël Varane", "Michel Platini", "Hugo Lloris"],
             "answer": "Hugo Lloris"
         }
     ],
     "croQ":[
         {
             "question": "Koľko krát sa na MS umiestnilo Chorvátsko v TOP 3?",
-            "options": ["1", "2", "4"],
+            "options": ["1", "2", "4", "3"],
             "answer": "3"
         },
         {
             "question": "V ktorom roku prvý krát Chorvátsko hralo na MS?",
-            "options": ["2002", "2006", "1994"],
+            "options": ["2002", "2006", "1994", "1998"],
             "answer": "1998"
         },
         {
             "question": "Akým výsledkom skončil debut Chorvátska na MS proti Jamajke? Chorváti hrali ako hostia.",
-            "options": ["2:2", "1:0", "1:2"],
+            "options": ["2:2", "1:0", "1:2", "1:3"],
             "answer": "1:3"
         },
         {
             "question": "Kto si dal vlastný gól vo finále MS 2018 proti Francúzsku pri prehre 2:4?",
-            "options": ["Marcelo Brozović", "Domagoj Vida", "Ivan Rakitić"],
+            "options": ["Marcelo Brozović", "Domagoj Vida", "Ivan Rakitić", "Mario Mandžukić"],
             "answer": "Mario Mandžukić"
         },
         {
             "question": "Ktorý dvaja hráči sú najlepšími strelcami Chorvátska na MS?",
-            "options": ["Šuker a Mandžukić", "Olić a Perišić", "Mandžukić a Olić"],
+            "options": ["Šuker a Mandžukić", "Olić a Perišić", "Mandžukić a Olić", "Šuker a Perišić"],
             "answer": "Šuker a Perišić"
         },
         {
             "question": "Kto odohral na MS najviac zápasov za Chorvátsko?",
-            "options": ["Dejan Lovren", "Ivan Perišić", "Mateo Kovačić"],
+            "options": ["Dejan Lovren", "Ivan Perišić", "Mateo Kovačić", "Luka Modrić"],
             "answer": "Luka Modrić"
         }
     ],
     "morQ":[
         {
             "question": "Koľko krát sa Maroko zúčastnilo MS?",
-            "options": ["3", "5", "4"],
+            "options": ["3", "5", "4", "6"],
             "answer": "6"
         },
         {
             "question": "V ktorom roku sa Maroku, ako prvému africkému tímu, podarilo dostať zo skupiny na MS?",
-            "options": ["1970", "2018", "2022"],
+            "options": ["1970", "2018", "2022", "1986"],
             "answer": "1986"
         },
         {
             "question": "V ktorom roku sa Maroku, ako prvému africkému tímu, podarilo dosiahnuť semi-finále na MS?",
-            "options": ["1994", "1998", "2018"],
+            "options": ["1994", "1998", "2018", "2022"],
             "answer": "2022"
         },
         {
             "question": "V roku 1998 si dal Youssef Chippo, ako prvý africký hráč, vlastný gól. Proti akému tímu hralo Maroko?",
-            "options": ["Brazília", "Škótsko", "Francúzsko"],
+            "options": ["Brazília", "Škótsko", "Francúzsko", "Nórsko"],
             "answer": "Nórsko"
         },
         {
             "question": "Kto je doposiaľ najlepším strelcom Maroka na MS s 3 gólmi?",
-            "options": ["Salaheddine Bassir", "Hakim Ziyech", "Hassan Nader"],
+            "options": ["Salaheddine Bassir", "Hakim Ziyech", "Hassan Nader", "Youssef En-Nesyri"],
             "answer": "Youssef En-Nesyri"
         },
         {
             "question": "Kto viedol Maroko ako kapitán na MS 2022?",
-            "options": ["Hakim Ziyech", "Sofyan Amrabat", "Achraf Hakimi"],
+            "options": ["Hakim Ziyech", "Sofyan Amrabat", "Achraf Hakimi", "Romain Saïss"],
             "answer": "Romain Saïss"
         }
     ]
