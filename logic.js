@@ -14,13 +14,12 @@ const answerD = document.getElementById("answerD")
 
 const modal = new bootstrap.Modal( document.getElementById("exampleModal"))
 
-let answers = [players.argentina[0].optionse[0], players.argentina[0].optionse[1], players.argentina[0].optionse[2], players.argentina[0].answere]
-let shuffledArray = answers.sort((a, b) => 0.5 - Math.random());
+let shuffledArray = players.argentina[0].optionse.sort((a, b) => 0.5 - Math.random());
 
-answerA.textContent = answers[0]
-answerB.textContent = answers[1]
-answerC.textContent = answers[2]
-answerD.textContent = answers[3]
+answerA.textContent = shuffledArray[0]
+answerB.textContent = shuffledArray[1]
+answerC.textContent = shuffledArray[2]
+answerD.textContent = shuffledArray[3]
 
 answerA.addEventListener("click", function(){
     if(answerA.textContent == players.argentina[0].answere){
