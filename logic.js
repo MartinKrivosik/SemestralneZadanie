@@ -2,6 +2,30 @@
 var players = await fetch('../json/players.json').then(r=>r.json())
 var teams = await fetch('../json/questions.json').then(r=>r.json())
 
+//setup teams
+const pteam = document.getElementById("playerteam");
+const oteam = document.getElementById("opponentteam");
+
+pteam.addEventListener('change', function() {
+	for(let i = 0; i < oteam.length; i++){
+	  if(oteam[i].value == pteam.value){
+		oteam[i].disabled = true;
+	  } else{
+		oteam[i].disabled = false;
+	  }
+	}
+});
+
+oteam.addEventListener('change', function() {
+	for(let i = 0; i < pteam.length; i++){
+	  if(pteam[i].value == oteam.value){
+		pteam[i].disabled = true;
+	  } else{
+		pteam[i].disabled = false;
+	  }
+	}
+});
+
 
 
 ////////////////////////////// GAME LOGIC //////////////////////////////
