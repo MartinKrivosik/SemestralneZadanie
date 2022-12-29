@@ -2,9 +2,9 @@
 Dominik:
   - - [ ] menu buttony na presmerovanie
   - - [ ] Setup page:
-    - - [ ] select1 - zobrazia sa hraci
-    - - [ ] select2 - ulozi sa super
-    - - [ ] select3 - ulozi sa obtiaznost
+    - - [x] select1 - zobrazia sa hraci
+    - - [x] select2 - ulozi sa super
+    - - [x] select3 - ulozi sa obtiaznost
     - - [ ] Drag and Drop na zoradenie hracov
   - - [ ] mobil - potriast mobilom na nahodne zoradenie hracov
   
