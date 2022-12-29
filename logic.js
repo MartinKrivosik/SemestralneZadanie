@@ -2,11 +2,15 @@
 var players = await fetch('../json/players.json').then(r=>r.json())
 var teams = await fetch('../json/questions.json').then(r=>r.json())
 
-//setup teams
+//setup teams, difficulty & players
 const pteam = document.getElementById("playerteam");
 const oteam = document.getElementById("opponentteam");
 
+let playerTeam = "argentina"
+let enemyTeam = "france"
+
 pteam.addEventListener('change', function() {
+	playerTeam = pteam.value;
 	for(let i = 0; i < oteam.length; i++){
 	  if(oteam[i].value == pteam.value){
 		oteam[i].disabled = true;
@@ -17,6 +21,7 @@ pteam.addEventListener('change', function() {
 });
 
 oteam.addEventListener('change', function() {
+	enemyTeam = oteam.value;
 	for(let i = 0; i < pteam.length; i++){
 	  if(pteam[i].value == oteam.value){
 		pteam[i].disabled = true;
@@ -26,14 +31,15 @@ oteam.addEventListener('change', function() {
 	}
 });
 
-
+const diff = document.getElementById("difficulty");
+let difficulty = "easy";
+diff.addEventListener("change", function(){
+	difficulty = diff.value;
+})
 
 ////////////////////////////// GAME LOGIC //////////////////////////////
 
 //TODO connect to sliders on setup page
-let playerTeam = "argentina"
-let enemyTeam = "france"
-let difficulty = "easy"
 let turn = Math.random() >= 0.5 ? "player" : "enemy";
 let playerNumber = 0;
 let turnNumber = 0;
