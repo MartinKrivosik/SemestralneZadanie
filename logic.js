@@ -117,6 +117,9 @@ let difficulty = "easy";
 
 
 if (document.body.className == "game"){
+
+	const hintButton = document.getElementById("hint")
+
 	const question = document.getElementById("questionText")
 	const answerA = document.getElementById("answerA")
 	const answerB = document.getElementById("answerB")
@@ -128,6 +131,9 @@ if (document.body.className == "game"){
 	
 	const activeA = document.getElementById("TeamAActive")
 	const activeB = document.getElementById("TeamBActive")
+
+	const logoA = document.getElementById("TeamALogo")
+	const logoB = document.getElementById("TeamBLogo")
 	
 	const modal = new bootstrap.Modal( document.getElementById("exampleModal"))
 	const title = document.getElementById("modalTitle")
@@ -138,9 +144,15 @@ if (document.body.className == "game"){
 
 	let usedIndexes = [];
 
+	let disabledNumber = 0
+
 	let options;
 	let answer;
 	let index;
+
+	logoA.src = ""
+	logoB.src = ""
+
 	function setupQuestion(){
 		if (turn == "player"){
 			activeA.src = "../photos/ball.png"
@@ -155,7 +167,6 @@ if (document.body.className == "game"){
 				index = Math.floor(Math.random() * teams[enemyTeam].length)
 			}
 			usedIndexes.push(index)
-			console.log(usedIndexes)
 			let randomQuestion = teams[enemyTeam][index]
 			question.textContent = randomQuestion.question
 		}
@@ -186,6 +197,13 @@ if (document.body.className == "game"){
 		answerB.style.background = "transparent"
 		answerC.style.background = "transparent"
 		answerD.style.background = "transparent"
+
+		answerA.disabled = false
+		answerB.disabled = false
+		answerC.disabled = false
+		answerD.disabled = false
+
+		disabledNumber = 0
 	
 	}
 	
@@ -361,6 +379,31 @@ if (document.body.className == "game"){
 
 	endButton.addEventListener("click", function(){
 		location.href = "index.html";
+	})
+
+	
+	hintButton.addEventListener("click", function(){
+		let buttons = [answerA, answerB, answerC, answerD]
+		let randomNumber = Math.floor(Math.random() * buttons.length) 
+		while (disabledNumber < 2){
+
+			if (turn == "player"){
+				if (buttons[randomNumber].textContent != players[playerTeam][playerNumber][answer]){
+					buttons[randomNumber].disabled = true;
+					buttons.splice(randomNumber, 1)		
+					disabledNumber++
+				}
+			}
+			else{
+				if (buttons[randomNumber].textContent != teams[enemyTeam][index].answer){
+					buttons[randomNumber].disabled = true;
+					buttons.splice(randomNumber, 1)		
+					disabledNumber++
+				}
+			}
+
+			randomNumber = Math.floor(Math.random() * buttons.length) 
+		}
 	})
 
 }
