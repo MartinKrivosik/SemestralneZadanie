@@ -4,6 +4,7 @@ var teams = await fetch('../json/questions.json').then(r=>r.json())
 
 //setup teams
 if (document.body.className == "setup"){
+
 	const pteam = document.getElementById("playerteam");
 	const oteam = document.getElementById("opponentteam");
 	const holders = document.querySelectorAll('.player h3')
@@ -42,66 +43,65 @@ if (document.body.className == "setup"){
 		difficulty = diff.value;
 	})
 
-	document.addEventListener('DOMContentLoaded', (event) => {
+	var dragSrcEl = null;
 
-		var dragSrcEl = null;
+	function handleDragStart(e) {
+		console.log(this.innerHTML + "0")
+		this.style.opacity = '0.4';
 
-		function handleDragStart(e) {
-			this.style.opacity = '0.4';
+		dragSrcEl = this;
 
-			dragSrcEl = this;
-
-			e.dataTransfer.effectAllowed = "move";
-			e.dataTransfer.setData("text/html", this.innerHTML);
-		}
-	  
-		function handleDragOver(e) {
-			if (e.preventDefault) {
-				e.preventDefault();
-			}
-		
-			e.dataTransfer.dropEffect = 'move';
-			  
-			return false;
-		}
-	  
-		function handleDragEnter(e) {
-		  	this.classList.add('over');
-		}
-	  
-		function handleDragLeave(e) {
-		  	this.classList.remove('over');
-		}
-
-		function handleDrop(e) {
+		e.dataTransfer.effectAllowed = "move";
+		e.dataTransfer.setData("text/html", this.innerHTML);
+	}
+	
+	function handleDragOver(e) {
+		if (e.preventDefault) {
 			e.preventDefault();
-			
-			if (dragSrcEl != this) {
-			  dragSrcEl.innerHTML = this.innerHTML;
-			  this.innerHTML = e.dataTransfer.getData('text/html');
-			}
-			
-			return false;
 		}
-
-		function handleDragEnd(e) {
-			this.style.opacity = '1';
-		
-			items.forEach(function (item) {
-				item.classList.remove('over');
-			});
-		}  
 	  
-		let items = document.querySelectorAll('.container .player');
-		items.forEach(function(item) {
-			item.addEventListener('dragstart', handleDragStart, false);
-			item.addEventListener('dragenter', handleDragEnter, false);
-			item.addEventListener('dragover', handleDragOver, false);
-			item.addEventListener('dragleave', handleDragLeave, false);
-			item.addEventListener('drop', handleDrop, false);
-			item.addEventListener('dragend', handleDragEnd, false);
+		e.dataTransfer.dropEffect = 'move';
+			
+		return false;
+	}
+	
+	function handleDragEnter(e) {
+		this.classList.add('over');
+	}
+	
+	function handleDragLeave(e) {
+		this.classList.remove('over');
+	}
+
+	function handleDrop(e) {
+		e.preventDefault();
+		  
+		if (dragSrcEl != this) {
+			dragSrcEl.innerHTML = this.innerHTML;
+			this.innerHTML = e.dataTransfer.getData('text/html');
+		}
+		  
+		return false;
+	}
+
+	function handleDragEnd(e) {
+		this.style.opacity = '1';
+	  
+		items.forEach(function (item) {
+			item.classList.remove('over');
 		});
-	  });
+	}  
+	
+	let items = document.querySelectorAll('.container .player');
+	items.forEach(function(item) {
+		item.addEventListener('dragstart', handleDragStart, false);
+		item.addEventListener('dragenter', handleDragEnter, false);
+		item.addEventListener('dragover', handleDragOver, false);
+		item.addEventListener('dragleave', handleDragLeave, false);
+		item.addEventListener('drop', handleDrop, false);
+		item.addEventListener('dragend', handleDragEnd, false);
+	});
+	;
 }
 
 ////////////////////////////// GAME LOGIC //////////////////////////////
