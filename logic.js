@@ -70,7 +70,13 @@ if (document.body.className == "game"){
 	
 	const modal = new bootstrap.Modal( document.getElementById("exampleModal"))
 	const title = document.getElementById("modalTitle")
+	const text = document.getElementById("modalText")
 	
+	const footer = document.getElementById("footer")
+	const endButton = document.getElementById("end")
+
+	let usedIndexes = [];
+
 	let options;
 	let answer;
 	let index;
@@ -84,6 +90,11 @@ if (document.body.className == "game"){
 			activeA.src = "../photos/glove.png"
 			activeB.src = "../photos/ball.png"
 			index = Math.floor(Math.random() * teams[enemyTeam].length)
+			while (usedIndexes.includes(index)){
+				index = Math.floor(Math.random() * teams[enemyTeam].length)
+			}
+			usedIndexes.push(index)
+			console.log(usedIndexes)
 			let randomQuestion = teams[enemyTeam][index]
 			question.textContent = randomQuestion.question
 		}
@@ -118,15 +129,32 @@ if (document.body.className == "game"){
 	}
 	
 	function endGame(){
+		let score = document.createElement("h2")
+		score.style.textAlign = "center"
+		let para = document.createElement("p")
+		para.style.textAlign = "center"
 		if (parseInt(scoreA.textContent) > parseInt(scoreB.textContent)){
 			title.textContent = "Pog, u won"
+			score.textContent = "Vyhral si " + scoreA.textContent + ":" + scoreB.textContent
+			para.textContent += "Pre ukončenie hry stlač tlačidlo 'Koniec hry' "
 		}
 		else if (parseInt(scoreA.textContent) < parseInt(scoreB.textContent)){
 			title.textContent = "Sadge, u lost"
+			score.textContent = "Prehral si " + scoreA.textContent + ":" + scoreB.textContent
+			para.textContent += "Pre ukončenie hry stlač tlačidlo 'Koniec hry'"
 		}
 		else{
+			const reset = document.createElement("button")
+			reset.textContent = "Reštart"
+			reset.addEventListener("click", function(){
+				location.href = "game.html"
+			})
+			reset.setAttribute("class", "btn btn-primary")
 			title.textContent = "remiza po penaltach, wtf???"
+			footer.appendChild(reset)
 		}
+		text.appendChild(score)
+		text.appendChild(para)
 		modal.show()
 	}
 
@@ -267,6 +295,11 @@ if (document.body.className == "game"){
 			setTimeout(setupQuestion, 500)
 		}
 	})
+
+	endButton.addEventListener("click", function(){
+		location.href = "index.html";
+	})
+
 }
 
 
