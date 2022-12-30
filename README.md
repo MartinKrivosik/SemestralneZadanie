@@ -9,12 +9,12 @@ Dominik:
   - - [ ] mobil - potriast mobilom na nahodne zoradenie hracov
   
 Krivko:
-  - - [ ] logika hry:
+  - - [X] logika hry:
     - - [x] ukazat Q a A
     - - [x] ci je vybrana spravna odpoved
     - - [x] pridat bod ak vybral spravnu
     - - [x] koniec - modal
-    - - [ ] 50/50 napoveda
+    - - [x] 50/50 napoveda
   - - [x] modal:
     - - [x] ak remiza: restart alebo koniec
     - - [x] ak W/L - koniec
