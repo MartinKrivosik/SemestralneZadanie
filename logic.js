@@ -92,7 +92,7 @@ if (document.body.className == "setup"){
 		});
 	}  
 	
-	let items = document.querySelectorAll('.container .player');
+	let items = document.querySelectorAll('.row .player');
 	items.forEach(function(item) {
 		item.addEventListener('dragstart', handleDragStart, false);
 		item.addEventListener('dragenter', handleDragEnter, false);
