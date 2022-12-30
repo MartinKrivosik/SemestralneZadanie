@@ -150,8 +150,11 @@ if (document.body.className == "game"){
 	let answer;
 	let index;
 
-	logoA.src = ""
-	logoB.src = ""
+	logoA.src = "../photos/flags/" + playerTeam + ".png"
+	logoB.src = "../photos/flags/" + enemyTeam + ".png"
+
+	console.log(logoA.src)
+
 
 	function setupQuestion(){
 		if (turn == "player"){
