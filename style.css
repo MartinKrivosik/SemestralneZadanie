@@ -20,7 +20,8 @@
 
 .player{
     border: 1px solid black;
-    width: 100px;
+    min-width: 100px;
+    max-width: 300px;
     cursor: move;
 }
 
@@ -40,7 +41,6 @@ label{
     height: 5vh;
     width: 20vw;
 }
-
 
 /* GAME STYLE*/
 

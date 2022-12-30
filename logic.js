@@ -8,7 +8,7 @@ if (document.body.className == "setup"){
 	const pteam = document.getElementById("playerteam");
 	const oteam = document.getElementById("opponentteam");
 	const holders = document.querySelectorAll('.player h3')
-	
+
 	let playerTeam = "argentina"
 	let enemyTeam = "france"
 	
