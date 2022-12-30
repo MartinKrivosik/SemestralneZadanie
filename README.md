@@ -13,10 +13,10 @@ Krivko:
     - - [x] ukazat Q a A
     - - [x] ci je vybrana spravna odpoved
     - - [x] pridat bod ak vybral spravnu
-    - - [ ] koniec - modal
+    - - [x] koniec - modal
     - - [ ] 50/50 napoveda
-  - - [ ] modal:
-    - - [ ] ak remiza: restart alebo koniec
-    - - [ ] ak W/L - koniec
+  - - [x] modal:
+    - - [x] ak remiza: restart alebo koniec
+    - - [x] ak W/L - koniec
   - - [ ] PWA
     

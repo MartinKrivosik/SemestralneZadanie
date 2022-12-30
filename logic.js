@@ -195,23 +195,25 @@ if (document.body.className == "game"){
 		let para = document.createElement("p")
 		para.style.textAlign = "center"
 		if (parseInt(scoreA.textContent) > parseInt(scoreB.textContent)){
-			title.textContent = "Pog, u won"
+			title.textContent = "Víťaztvo :)"
 			score.textContent = "Vyhral si " + scoreA.textContent + ":" + scoreB.textContent
 			para.textContent += "Pre ukončenie hry stlač tlačidlo 'Koniec hry' "
 		}
 		else if (parseInt(scoreA.textContent) < parseInt(scoreB.textContent)){
-			title.textContent = "Sadge, u lost"
+			title.textContent = "Prehra :("
 			score.textContent = "Prehral si " + scoreA.textContent + ":" + scoreB.textContent
 			para.textContent += "Pre ukončenie hry stlač tlačidlo 'Koniec hry'"
 		}
 		else{
 			const reset = document.createElement("button")
+			title.textContent = "Remíza :|"
 			reset.textContent = "Reštart"
 			reset.addEventListener("click", function(){
 				location.href = "game.html"
 			})
+			score.textContent = "Remízoval si " + scoreA.textContent + ":" + scoreB.textContent
+			para.textContent += "Pre ukončenie hry stlač tlačidlo 'Koniec hry' a ak chces skúsiť hru znova s rovnakými nastaveniami stlač 'Reštart'"
 			reset.setAttribute("class", "btn btn-primary")
-			title.textContent = "remiza po penaltach, wtf???"
 			footer.appendChild(reset)
 		}
 		text.appendChild(score)
