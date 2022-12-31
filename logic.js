@@ -7,12 +7,14 @@ if (document.body.className == "setup"){
 
 	const pteam = document.getElementById("playerteam");
 	const oteam = document.getElementById("opponentteam");
-	const holders = document.querySelectorAll('.player h3')
+	const holders = document.querySelectorAll('.player h3');
+	const el = document.getElementsByClassName("player");
 
 	let playerTeam = "argentina"
 	let enemyTeam = "france"
 	
 	pteam.addEventListener('change', function() {
+		const el = document.getElementsByClassName("player");
 		playerTeam = pteam.value;
 		for(let i = 0; i < oteam.length; i++){
 		  if(oteam[i].value == pteam.value){
@@ -23,7 +25,11 @@ if (document.body.className == "setup"){
 		}
 		for(let j = 0; j < players[playerTeam].length - 1; j++){
             holders[j].innerHTML = players[playerTeam][j].name;
+			if(el[j].hasAttribute("draggable")){
+				el[j].setAttribute("draggable", true);
+			}
         }
+		
 	});
 	
 	oteam.addEventListener('change', function() {
