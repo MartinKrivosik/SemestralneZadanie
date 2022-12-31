@@ -5,7 +5,7 @@ Dominik:
     - - [x] select1 - zobrazia sa hraci
     - - [x] select2 - ulozi sa super
     - - [x] select3 - ulozi sa obtiaznost
-    - - [ ] Drag and Drop na zoradenie hracov
+    - - [x] Drag and Drop na zoradenie hracov
   - - [ ] mobil - potriast mobilom na nahodne zoradenie hracov
   
 Krivko:
