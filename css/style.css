@@ -37,6 +37,10 @@ label{
     font-size: 20px;
 }
 
+.list{
+    list-style: none;
+}
+
 #continue{
     height: 5vh;
     width: 20vw;
