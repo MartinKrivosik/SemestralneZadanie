@@ -123,7 +123,7 @@ enemyTeam = localStorage.getItem("enemyTeam");
 
 if (document.body.className == "game"){
 
-	const hintButton = document.getElementById("hint")
+	const hintButton = document.querySelectorAll(".hint")
 
 	const question = document.getElementById("questionText")
 	const answerA = document.getElementById("answerA")
@@ -131,14 +131,14 @@ if (document.body.className == "game"){
 	const answerC = document.getElementById("answerC")
 	const answerD = document.getElementById("answerD")
 	
-	const scoreA = document.getElementById("TeamAScore")
-	const scoreB = document.getElementById("TeamBScore")
+	const scoreA = document.querySelectorAll(".TeamAScore")
+	const scoreB = document.querySelectorAll(".TeamBScore")
 	
-	const activeA = document.getElementById("TeamAActive")
-	const activeB = document.getElementById("TeamBActive")
+	const activeA = document.querySelectorAll(".TeamAActive")
+	const activeB = document.querySelectorAll(".TeamBActive")
 
-	const logoA = document.getElementById("TeamALogo")
-	const logoB = document.getElementById("TeamBLogo")
+	const logoA = document.querySelectorAll(".TeamALogo")
+	const logoB = document.querySelectorAll(".TeamBLogo")
 	
 	const modal = new bootstrap.Modal( document.getElementById("exampleModal"))
 	const title = document.getElementById("modalTitle")
@@ -155,21 +155,24 @@ if (document.body.className == "game"){
 	let answer;
 	let index;
 
-	logoA.src = "../photos/flags/" + playerTeam + ".png"
-	logoB.src = "../photos/flags/" + enemyTeam + ".png"
-
-	console.log(logoA.src)
-
+	logoA[0].src = "../photos/flags/" + playerTeam + ".png"
+	logoA[1].src = "../photos/flags/" + playerTeam + ".png"
+	logoB[0].src = "../photos/flags/" + enemyTeam + ".png"
+	logoB[1].src = "../photos/flags/" + enemyTeam + ".png"
 
 	function setupQuestion(){
 		if (turn == "player"){
-			activeA.src = "../photos/ball.png"
-			activeB.src = "../photos/glove.png"
+			activeA[0].src = "../photos/ball.png"
+			activeA[1].src = "../photos/ball.png"
+			activeB[0].src = "../photos/glove.png"
+			activeB[1].src = "../photos/glove.png"
 			question.textContent = players[playerTeam][playerNumber][difficulty]
 		}
 		else{
-			activeA.src = "../photos/glove.png"
-			activeB.src = "../photos/ball.png"
+			activeA[0].src = "../photos/glove.png"
+			activeA[1].src = "../photos/glove.png"
+			activeB[0].src = "../photos/ball.png"
+			activeB[1].src = "../photos/ball.png"
 			index = Math.floor(Math.random() * teams[enemyTeam].length)
 			while (usedIndexes.includes(index)){
 				index = Math.floor(Math.random() * teams[enemyTeam].length)
@@ -206,6 +209,11 @@ if (document.body.className == "game"){
 		answerC.style.background = "transparent"
 		answerD.style.background = "transparent"
 
+		answerA.style.border = "1px solid black"
+		answerB.style.border = "1px solid black"
+		answerC.style.border = "1px solid black"
+		answerD.style.border = "1px solid black"
+
 		answerA.disabled = false
 		answerB.disabled = false
 		answerC.disabled = false
@@ -220,14 +228,14 @@ if (document.body.className == "game"){
 		score.style.textAlign = "center"
 		let para = document.createElement("p")
 		para.style.textAlign = "center"
-		if (parseInt(scoreA.textContent) > parseInt(scoreB.textContent)){
+		if (parseInt(scoreA[0].textContent) > parseInt(scoreB[0].textContent)){
 			title.textContent = "Víťaztvo :)"
-			score.textContent = "Vyhral si " + scoreA.textContent + ":" + scoreB.textContent
+			score.textContent = "Vyhral si " + scoreA[0].textContent + ":" + scoreB[0].textContent
 			para.textContent += "Pre ukončenie hry stlač tlačidlo 'Koniec hry' "
 		}
-		else if (parseInt(scoreA.textContent) < parseInt(scoreB.textContent)){
+		else if (parseInt(scoreA[0].textContent) < parseInt(scoreB[0].textContent)){
 			title.textContent = "Prehra :("
-			score.textContent = "Prehral si " + scoreA.textContent + ":" + scoreB.textContent
+			score.textContent = "Prehral si " + scoreA[0].textContent + ":" + scoreB[0].textContent
 			para.textContent += "Pre ukončenie hry stlač tlačidlo 'Koniec hry'"
 		}
 		else{
@@ -237,7 +245,7 @@ if (document.body.className == "game"){
 			reset.addEventListener("click", function(){
 				location.href = "game.html"
 			})
-			score.textContent = "Remízoval si " + scoreA.textContent + ":" + scoreB.textContent
+			score.textContent = "Remízoval si " + scoreA[0].textContent + ":" + scoreB[0].textContent
 			para.textContent += "Pre ukončenie hry stlač tlačidlo 'Koniec hry' a ak chces skúsiť hru znova s rovnakými nastaveniami stlač 'Reštart'"
 			reset.setAttribute("class", "btn btn-primary")
 			footer.appendChild(reset)
@@ -252,7 +260,8 @@ if (document.body.className == "game"){
 		if (turn == "player"){
 			if(answerA.textContent == players[playerTeam][playerNumber][answer]){
 				answerA.style.background = "green"
-				scoreA.textContent = parseInt(scoreA.textContent)+1
+				scoreA[0].textContent = parseInt(scoreA[0].textContent)+1
+				scoreA[1].textContent = parseInt(scoreA[1].textContent)+1
 			}
 			else{
 				answerA.style.background = "red"
@@ -263,7 +272,8 @@ if (document.body.className == "game"){
 				answerA.style.background = "green"
 			}
 			else{
-				scoreB.textContent = parseInt(scoreB.textContent)+1
+				scoreB[0].textContent = parseInt(scoreB[0].textContent)+1
+				scoreB[1].textContent = parseInt(scoreB[1].textContent)+1
 				answerA.style.background = "red"
 			}
 			turnNumber++
@@ -286,7 +296,8 @@ if (document.body.className == "game"){
 		if (turn == "player"){
 			if(answerB.textContent == players[playerTeam][playerNumber][answer]){
 				answerB.style.background = "green"
-				scoreA.textContent = parseInt(scoreA.textContent)+1
+				scoreA[0].textContent = parseInt(scoreA[0].textContent)+1
+				scoreA[1].textContent = parseInt(scoreA[1].textContent)+1
 			}
 			else{
 				answerB.style.background = "red"
@@ -297,7 +308,8 @@ if (document.body.className == "game"){
 				answerB.style.background = "green"
 			}
 			else{
-				scoreB.textContent = parseInt(scoreB.textContent)+1
+				scoreB[0].textContent = parseInt(scoreB[0].textContent)+1
+				scoreB[1].textContent = parseInt(scoreB[1].textContent)+1
 				answerB.style.background = "red"
 			}
 			turnNumber++
@@ -320,7 +332,8 @@ if (document.body.className == "game"){
 		if (turn == "player"){
 			if(answerC.textContent == players[playerTeam][playerNumber][answer]){
 				answerC.style.background = "green"
-				scoreA.textContent = parseInt(scoreA.textContent)+1
+				scoreA[0].textContent = parseInt(scoreA[0].textContent)+1
+				scoreA[1].textContent = parseInt(scoreA[1].textContent)+1
 			}
 			else{
 				answerC.style.background = "red"
@@ -331,7 +344,8 @@ if (document.body.className == "game"){
 				answerC.style.background = "green"
 			}
 			else{
-				scoreB.textContent = parseInt(scoreB.textContent)+1
+				scoreB[0].textContent = parseInt(scoreB[0].textContent)+1
+				scoreB[1].textContent = parseInt(scoreB[1].textContent)+1
 				answerC.style.background = "red"
 			}
 			turnNumber++
@@ -354,7 +368,8 @@ if (document.body.className == "game"){
 		if (turn == "player"){
 			if(answerD.textContent == players[playerTeam][playerNumber][answer]){
 				answerD.style.background = "green"
-				scoreA.textContent = parseInt(scoreA.textContent)+1
+				scoreA[0].textContent = parseInt(scoreA[0].textContent)+1
+				scoreA[1].textContent = parseInt(scoreA[1].textContent)+1
 			}
 			else{
 				answerD.style.background = "red"
@@ -365,7 +380,8 @@ if (document.body.className == "game"){
 				answerD.style.background = "green"
 			}
 			else{
-				scoreB.textContent = parseInt(scoreB.textContent)+1
+				scoreB[0].textContent = parseInt(scoreB[0].textContent)+1
+				scoreB[1].textContent = parseInt(scoreB[1].textContent)+1				
 				answerD.style.background = "red"
 			}
 			turnNumber++
@@ -389,8 +405,7 @@ if (document.body.className == "game"){
 		location.href = "index.html";
 	})
 
-	
-	hintButton.addEventListener("click", function(){
+	hintButton[0].addEventListener("click", function(){
 		let buttons = [answerA, answerB, answerC, answerD]
 		let randomNumber = Math.floor(Math.random() * buttons.length) 
 		while (disabledNumber < 2){
@@ -398,6 +413,7 @@ if (document.body.className == "game"){
 			if (turn == "player"){
 				if (buttons[randomNumber].textContent != players[playerTeam][playerNumber][answer]){
 					buttons[randomNumber].disabled = true;
+					buttons[randomNumber].style.border = "2px solid red"
 					buttons.splice(randomNumber, 1)		
 					disabledNumber++
 				}
@@ -405,6 +421,33 @@ if (document.body.className == "game"){
 			else{
 				if (buttons[randomNumber].textContent != teams[enemyTeam][index].answer){
 					buttons[randomNumber].disabled = true;
+					buttons[randomNumber].style.border = "2px solid red"
+					buttons.splice(randomNumber, 1)		
+					disabledNumber++
+				}
+			}
+
+			randomNumber = Math.floor(Math.random() * buttons.length) 
+		}
+	})
+
+	hintButton[1].addEventListener("click", function(){
+		let buttons = [answerA, answerB, answerC, answerD]
+		let randomNumber = Math.floor(Math.random() * buttons.length) 
+		while (disabledNumber < 2){
+
+			if (turn == "player"){
+				if (buttons[randomNumber].textContent != players[playerTeam][playerNumber][answer]){
+					buttons[randomNumber].disabled = true;
+					buttons[randomNumber].style.border = "2px solid red"
+					buttons.splice(randomNumber, 1)		
+					disabledNumber++
+				}
+			}
+			else{
+				if (buttons[randomNumber].textContent != teams[enemyTeam][index].answer){
+					buttons[randomNumber].disabled = true;
+					buttons[randomNumber].style.border = "2px solid red"
 					buttons.splice(randomNumber, 1)		
 					disabledNumber++
 				}

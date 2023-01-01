@@ -15,30 +15,59 @@
 
 <div>
     <br>
-    <div class="row justify-content-center justify-content-sm-center justify-content-md-center" id="scoreboard">
-        <div class="col-auto col-sm-auto col-md-auto">
-            <button id="hint">50/50</button>
+    <div class="row d-none d-md-flex justify-content-md-center justify-content-lg-center" id="scoreboard">
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto">
+            <button class="hint">50/50</button>
         </div>
-        <div class="col-auto col-sm-auto col-md-auto" id="activeA">
-            <img src="../photos/ball.png" alt="active" id="TeamAActive">
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto">
+            <img src="../photos/ball.png" alt="active" class="TeamAActive">
         </div>
-        <div class="col-auto col-sm-auto col-md-auto">
-            <img src="../photos/flags/argentina.png" alt="teamALogo" id="TeamALogo">
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto">
+            <img src="../photos/flags/argentina.png" alt="teamALogo" class="TeamALogo">
         </div>
-        <div class="col-auto col-sm-auto col-md-auto" id="TeamAScore">
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto TeamAScore">
             <p>0</p>
         </div>
-        <div class="col-auto col-sm-auto col-md-auto">
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto">
             <p> : </p>
         </div>
-        <div class="col-auto col-sm-auto col-md-auto" id="TeamBScore">
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto TeamBScore">
             <p>0</p>
         </div>
-        <div class="col-auto col-sm-auto col-md-auto">
-            <img src="" alt="teamBLogo" id="TeamBLogo">
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto">
+            <img src="" alt="teamBLogo" class="TeamBLogo">
         </div>
-        <div class="col-auto col-sm-auto col-md-auto" id="activeB">
-            <img src="../photos/glove.png" alt="active" id="TeamBActive">
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto">
+            <img src="../photos/glove.png" alt="active" class="TeamBActive">
+        </div>
+    </div>
+    <div class="row d-flex d-sm-flex d-md-none justify-content-center">
+
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto" id="activeA">
+            <img src="../photos/ball.png" alt="active" class="TeamAActive">
+        </div>
+        <div class="col-2">
+            <button class="hint">50/50</button>
+        </div>
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto" id="activeB">
+            <img src="../photos/glove.png" alt="active" class="TeamBActive">
+        </div>
+    </div>
+    <div class="row d-flex d-sm-flex d-md-none justify-content-center">
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto" >
+            <img src="../photos/flags/argentina.png" alt="teamALogo" class="TeamALogo">
+        </div>
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto TeamAScore">
+            <p>0</p>
+        </div>
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto">
+            <p> : </p>
+        </div>
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto TeamBScore">
+            <p>0</p>
+        </div>
+        <div class="col-auto col-sm-auto col-md-auto col-lg-auto">
+            <img src="../photos/flags/argentina.png" alt="teamBLogo" class="TeamBLogo">
         </div>
     </div>
     <br>
