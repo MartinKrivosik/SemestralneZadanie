@@ -2,19 +2,21 @@
 var players = await fetch('../json/players.json').then(r=>r.json())
 var teams = await fetch('../json/questions.json').then(r=>r.json())
 
+let difficulty = "easy";
+let playerTeam = "argentina";
+let enemyTeam = "france";
+
 //setup teams
+
 if (document.body.className == "setup"){
 
 	const pteam = document.getElementById("playerteam");
 	const oteam = document.getElementById("opponentteam");
 	const holders = document.querySelectorAll('.player h3');
 	const el = document.getElementsByClassName("player");
-
-	let playerTeam = "argentina"
-	let enemyTeam = "france"
+	const diff = document.getElementById("difficulty");
 	
 	pteam.addEventListener('change', function() {
-		const el = document.getElementsByClassName("player");
 		playerTeam = pteam.value;
 		for(let i = 0; i < oteam.length; i++){
 		  if(oteam[i].value == pteam.value){
@@ -28,8 +30,7 @@ if (document.body.className == "setup"){
 			if(el[j].hasAttribute("draggable")){
 				el[j].setAttribute("draggable", true);
 			}
-        }
-		
+        }		
 	});
 	
 	oteam.addEventListener('change', function() {
@@ -43,10 +44,9 @@ if (document.body.className == "setup"){
 		}
 	});
 	
-	const diff = document.getElementById("difficulty");
-	let difficulty = "easy";
 	diff.addEventListener("change", function(){
-		difficulty = diff.value;
+  		difficulty = diff.value;
+		console.log(difficulty);
 	})
 
 	var dragSrcEl = null;
@@ -107,7 +107,6 @@ if (document.body.className == "setup"){
 		item.addEventListener('drop', handleDrop, false);
 		item.addEventListener('dragend', handleDragEnd, false);
 	});
-	;
 }
 
 ////////////////////////////// GAME LOGIC //////////////////////////////
@@ -115,12 +114,6 @@ if (document.body.className == "setup"){
 let turn = Math.random() >= 0.5 ? "player" : "enemy";
 let playerNumber = 0;
 let turnNumber = 0;
-
-
-let playerTeam = "argentina"
-let enemyTeam = "france"
-let difficulty = "easy";
-
 
 if (document.body.className == "game"){
 
