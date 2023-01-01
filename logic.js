@@ -64,10 +64,8 @@ if (document.body.className == "setup"){
 	}
 	
 	function handleDragOver(e) {
-		if (e.preventDefault) {
-			e.preventDefault();
-		}
-	  
+		e.preventDefault();
+		
 		e.dataTransfer.dropEffect = 'move';
 			
 		return false;
@@ -88,7 +86,14 @@ if (document.body.className == "setup"){
 			dragSrcEl.innerHTML = this.innerHTML;
 			this.innerHTML = e.dataTransfer.getData('text/html');
 		}
-		  
+
+		var names = document.querySelectorAll(".list .player h3")
+		var tab = [];
+
+		for(let i = 0; i < names.length; i++){
+			tab.push(names[i].innerHTML);
+		}
+		localStorage.setItem("playersOrder", tab);
 		return false;
 	}
 
@@ -120,6 +125,8 @@ let turnNumber = 0;
 difficulty = localStorage.getItem("difficulty");
 playerTeam = localStorage.getItem("playerTeam");
 enemyTeam = localStorage.getItem("enemyTeam");
+//premenuj si to podla potreby
+let order = localStorage.getItem("playersOrder");
 
 if (document.body.className == "game"){
 
