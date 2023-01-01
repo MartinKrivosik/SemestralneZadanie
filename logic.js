@@ -2,9 +2,9 @@
 var players = await fetch('../json/players.json').then(r=>r.json())
 var teams = await fetch('../json/questions.json').then(r=>r.json())
 
-let difficulty = "easy";
-let playerTeam = "argentina";
-let enemyTeam = "france";
+let difficulty;
+let playerTeam;
+let enemyTeam;
 
 //setup teams
 
@@ -30,7 +30,8 @@ if (document.body.className == "setup"){
 			if(el[j].hasAttribute("draggable")){
 				el[j].setAttribute("draggable", true);
 			}
-        }		
+        }	
+		localStorage.setItem("playerTeam", playerTeam);	
 	});
 	
 	oteam.addEventListener('change', function() {
@@ -42,11 +43,12 @@ if (document.body.className == "setup"){
 			pteam[i].disabled = false;
 		  }
 		}
+		localStorage.setItem("enemyTeam", enemyTeam);
 	});
 	
 	diff.addEventListener("change", function(){
   		difficulty = diff.value;
-		console.log(difficulty);
+		localStorage.setItem("difficulty", difficulty);
 	})
 
 	var dragSrcEl = null;
@@ -114,6 +116,10 @@ if (document.body.className == "setup"){
 let turn = Math.random() >= 0.5 ? "player" : "enemy";
 let playerNumber = 0;
 let turnNumber = 0;
+
+difficulty = localStorage.getItem("difficulty");
+playerTeam = localStorage.getItem("playerTeam");
+enemyTeam = localStorage.getItem("enemyTeam");
 
 if (document.body.className == "game"){
 
