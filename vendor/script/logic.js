@@ -73,6 +73,23 @@ if (document.body.className == "setup"){
 		localStorage.setItem("difficulty", difficulty);	
 	})
 
+	window.addEventListener('deviceorientation', function(event) {
+		let z = event.alpha;
+		let playerList = document.getElementById("list");
+		var namesPos = playerList.getElementsByTagName("li");
+		let values = Array.from(namesPos, item => item.textContent);
+		if (z > 120 || z < 60 ) {	
+			for (let i = values.length - 1; i > 0; i--) {
+				let index = Math.floor(Math.random() * (i + 1));
+				[values[i], values[index]] = [values[index], values[i]];
+
+				// Swap the li elements at the current and random indexes
+				list.insertBefore(namesPos[i], namesPos[index]);
+			}
+		}
+		localStorage.setItem("playersOrder", values);
+  	});
+
 	var dragSrcEl = null;
 
 	function handleDragStart(e) {
