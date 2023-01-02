@@ -409,7 +409,7 @@ if (document.body.className == "game"){
 	})
 
 	endButton.addEventListener("click", function(){
-		location.href = "index.html";
+		location.href = "../../index.html";
 	})
 
 	hintButton[0].addEventListener("click", function(){
