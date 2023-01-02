@@ -148,7 +148,10 @@ difficulty = localStorage.getItem("difficulty");
 playerTeam = localStorage.getItem("playerTeam");
 enemyTeam = localStorage.getItem("enemyTeam");
 //premenuj si to podla potreby
-let order = localStorage.getItem("playersOrder");
+let order = localStorage.getItem("playersOrder").split(',');
+order.push(players[playerTeam][5].name)
+console.log(order)
+
 
 if (document.body.className == "game"){
 
@@ -189,13 +192,22 @@ if (document.body.className == "game"){
 	logoB[0].src = "../photos/flags/" + enemyTeam + ".png"
 	logoB[1].src = "../photos/flags/" + enemyTeam + ".png"
 
+	let playerWas
+	let currPlayer = 0
+
 	function setupQuestion(){
 		if (turn == "player"){
 			activeA[0].src = "../photos/ball.png"
 			activeA[1].src = "../photos/ball.png"
 			activeB[0].src = "../photos/glove.png"
 			activeB[1].src = "../photos/glove.png"
-			question.textContent = players[playerTeam][playerNumber][difficulty]
+			for (let cP = 0; cP < players[playerTeam].length; cP++){
+				if(players[playerTeam][cP].name == order[playerNumber]){
+					question.textContent = players[playerTeam][cP][difficulty]
+					currPlayer = cP
+				}
+			}
+			//question.textContent = players[playerTeam][playerNumber][difficulty]
 		}
 		else{
 			activeA[0].src = "../photos/glove.png"
@@ -222,7 +234,8 @@ if (document.body.className == "game"){
 		
 		let shuffledArray;
 		if (turn == "player"){
-			shuffledArray = players[playerTeam][playerNumber][options].sort((a, b) => 0.5 - Math.random());
+			
+			shuffledArray = players[playerTeam][currPlayer][options].sort((a, b) => 0.5 - Math.random());
 		}
 		else{
 			shuffledArray = teams[enemyTeam][index].options.sort((a, b) => 0.5 - Math.random()) 
@@ -287,7 +300,7 @@ if (document.body.className == "game"){
 	setupQuestion()
 	answerA.addEventListener("click", function(){
 		if (turn == "player"){
-			if(answerA.textContent == players[playerTeam][playerNumber][answer]){
+			if(answerA.textContent == players[playerTeam][currPlayer][answer]){
 				answerA.style.background = "green"
 				scoreA[0].textContent = parseInt(scoreA[0].textContent)+1
 				scoreA[1].textContent = parseInt(scoreA[1].textContent)+1
@@ -309,10 +322,14 @@ if (document.body.className == "game"){
 		}
 		if (turn == "player"){
 			turn = "enemy"
+			playerWas = true
 		}
 		else{
 			turn = "player"
-			playerNumber++
+			if (playerWas){
+				playerNumber++
+				playerWas = false
+			}
 		}
 		if(turnNumber == 5){
 			setTimeout(endGame, 500)
@@ -323,7 +340,7 @@ if (document.body.className == "game"){
 	})
 	answerB.addEventListener("click", function(){
 		if (turn == "player"){
-			if(answerB.textContent == players[playerTeam][playerNumber][answer]){
+			if(answerB.textContent == players[playerTeam][currPlayer][answer]){
 				answerB.style.background = "green"
 				scoreA[0].textContent = parseInt(scoreA[0].textContent)+1
 				scoreA[1].textContent = parseInt(scoreA[1].textContent)+1
@@ -345,10 +362,14 @@ if (document.body.className == "game"){
 		}
 		if (turn == "player"){
 			turn = "enemy"
+			playerWas = true
 		}
 		else{
 			turn = "player"
-			playerNumber++
+			if (playerWas){
+				playerNumber++
+				playerWas = false
+			}
 		}
 		if(turnNumber == 5){
 			setTimeout(endGame, 500)
@@ -359,7 +380,7 @@ if (document.body.className == "game"){
 	})
 	answerC.addEventListener("click", function(){
 		if (turn == "player"){
-			if(answerC.textContent == players[playerTeam][playerNumber][answer]){
+			if(answerC.textContent == players[playerTeam][currPlayer][answer]){
 				answerC.style.background = "green"
 				scoreA[0].textContent = parseInt(scoreA[0].textContent)+1
 				scoreA[1].textContent = parseInt(scoreA[1].textContent)+1
@@ -381,10 +402,14 @@ if (document.body.className == "game"){
 		}
 		if (turn == "player"){
 			turn = "enemy"
+			playerWas = true
 		}
 		else{
 			turn = "player"
-			playerNumber++
+			if (playerWas){
+				playerNumber++
+				playerWas = false
+			}
 		}
 		if(turnNumber == 5){
 			setTimeout(endGame, 500)
@@ -395,7 +420,7 @@ if (document.body.className == "game"){
 	})
 	answerD.addEventListener("click", function(){
 		if (turn == "player"){
-			if(answerD.textContent == players[playerTeam][playerNumber][answer]){
+			if(answerD.textContent == players[playerTeam][currPlayer][answer]){
 				answerD.style.background = "green"
 				scoreA[0].textContent = parseInt(scoreA[0].textContent)+1
 				scoreA[1].textContent = parseInt(scoreA[1].textContent)+1
@@ -417,10 +442,14 @@ if (document.body.className == "game"){
 		}
 		if (turn == "player"){
 			turn = "enemy"
+			playerWas = true
 		}
 		else{
 			turn = "player"
-			playerNumber++
+			if (playerWas){
+				playerNumber++
+				playerWas = false
+			}
 		}
 		if(turnNumber == 5){
 			setTimeout(endGame, 500)
