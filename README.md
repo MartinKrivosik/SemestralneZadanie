@@ -1,7 +1,7 @@
 # SemestralneZadanie
 Dominik:
   - - [ ] menu buttony na presmerovanie
-  - - [ ] Setup page:
+  - - [x] Setup page:
     - - [x] select1 - zobrazia sa hraci
     - - [x] select2 - ulozi sa super
     - - [x] select3 - ulozi sa obtiaznost
