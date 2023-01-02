@@ -6,7 +6,7 @@ Dominik:
     - - [x] select2 - ulozi sa super
     - - [x] select3 - ulozi sa obtiaznost
     - - [x] Drag and Drop na zoradenie hracov
-  - - [ ] mobil - potriast mobilom na nahodne zoradenie hracov
+  - - [x] mobil - potriast mobilom na nahodne zoradenie hracov
   
 Krivko:
   - - [X] logika hry:
