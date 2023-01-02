@@ -330,7 +330,7 @@ if (document.body.className == "game"){
 				playerWas = false
 			}
 		}
-		if(turnNumber == 6){
+		if(turnNumber == 5){
 			setTimeout(endGame, 500)
 		}
 		else{
@@ -370,7 +370,7 @@ if (document.body.className == "game"){
 				playerWas = false
 			}
 		}
-		if(turnNumber == 6){
+		if(turnNumber == 5){
 			setTimeout(endGame, 500)
 		}
 		else{
@@ -410,7 +410,7 @@ if (document.body.className == "game"){
 				playerWas = false
 			}
 		}
-		if(turnNumber == 6){
+		if(turnNumber == 5){
 			setTimeout(endGame, 500)
 		}
 		else{
@@ -450,7 +450,7 @@ if (document.body.className == "game"){
 				playerWas = false
 			}
 		}
-		if(turnNumber == 6){
+		if(turnNumber == 5){
 			setTimeout(endGame, 500)
 		}
 		else{
