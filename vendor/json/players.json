@@ -9,7 +9,7 @@
             "optionsh": ["6", "8", "5", "7"],
             "answerh": "7",
             "image": 1,
-            "path": 1
+            "path": "../photos/messi.jpg"
         },
         {
             "name": "Paulo Dybala",
@@ -19,8 +19,8 @@
             "hard": "V akom veku skóroval Paulo Dybala svoj prvý gól v Serie A?",
             "optionsh": ["20", "16", "19", "18"],
             "answerh": "18",
-            "image": 1,
-            "path": 1
+            "image": 2,
+            "path": "../photos/dybala.jpg"
         },
         {
             "name": "Leandro Paredes",
@@ -30,8 +30,8 @@
             "hard": "Koľko žltých kariet získal Leandro Paredes za svoju klubovú kariéru?",
             "optionsh": ["87", "100", "112", "95"],
             "answerh": "95",
-            "image": 1,
-            "path": 1
+            "image": 3,
+            "path": "../photos/paredes.jpg"
         },
         {
             "name": "Gonzalo Montiel",
@@ -41,8 +41,8 @@
             "hard": "Na akej pozícii hrá Gonzalo Montiel?",
             "optionsh": ["Ľavý obranca", "Lavý záložník", "Pravý záložník", "Pravý obranca"],
             "answerh": "Pravý obranca",
-            "image": 1,
-            "path": 1
+            "image": 4,
+            "path": "../photos/montiel.jpg"
         },
         {
             "name": "Enzo Fernández",
@@ -52,8 +52,8 @@
             "hard": "Akú približnú prestupovú cenu má Enzo Fernández?",
             "optionsh": ["25 mil.€", "55 mil.€", "100 mil.€", "35 mil.€"],
             "answerh": "35 mil.€",
-            "image": 1,
-            "path": 1
+            "image": 5,
+            "path": "../photos/enzo.jpg"
         },
         {
             "name": "Emiliano Martínez",
@@ -63,8 +63,8 @@
             "hard": "V koľkých zápasoch v Premier League si Emiliano Martínez udržal čisté konto?",
             "optionsh": ["9", "8", "5", "3"],
             "answerh": "3",
-            "image": 1,
-            "path": 1
+            "image": 6,
+            "path": "../photos/martineze.jpg"
         }
     ],
     "france":[
@@ -77,7 +77,7 @@
             "optionsh": ["Leonardo", "Hugo", "Olivier", "Ethan"],
             "answerh": "Ethan",
             "image": 1,
-            "path": 1
+            "path": "../photos/mbappe.jpg"
         },
         {
             "name": "Kingsley Coman",
@@ -87,8 +87,8 @@
             "hard": "V akej minúte skóroval Kingsley Coman jediný, ale víťazný gól vo finále Champions League proti PSG?",
             "optionsh": ["36", "90+2", "73", "59"],
             "answerh": "59",
-            "image": 1,
-            "path": 1
+            "image": 2,
+            "path": "../photos/coman.jpg"
         },
         {
             "name": "Aurélien Tchouaméni",
@@ -98,8 +98,8 @@
             "hard": "V akom roku sa narodil Aurélien Tchouaméni?",
             "optionsh": ["2001", "1998", "2004", "2000"],
             "answerh": "2000",
-            "image": 1,
-            "path": 1
+            "image": 3,
+            "path": "../photos/tchouameni.jpg"
         },
         {
             "name": "Randal Kolo Muani",
@@ -109,8 +109,8 @@
             "hard": "Ktorý štát má Randal Kolo Muani možnosť reprezentovať okrem Francúzska?",
             "optionsh": ["Kongo", "Zambia", "Ghana", "Konžská demokratická republika"],
             "answerh": "Konžská demokratická republika",
-            "image": 1,
-            "path": 1
+            "image": 4,
+            "path": "../photos/kolomuani.jpg"
         },
         {
             "name": "Marcus Thuram",
@@ -120,8 +120,8 @@
             "hard": "Ako sa volá známy futbalista a otec Marcusa Thurama?",
             "optionsh": ["Kylian", "Zinedine", "Clemént", "Lilian"],
             "answerh": "Lilian",
-            "image": 1,
-            "path": 1
+            "image": 5,
+            "path": "../photos/thuram.jpg"
         },
         {
             "name": "Hugo Lloris",
@@ -131,8 +131,8 @@
             "hard": "Koho penaltu na Majstovstvách sveta 2022 Hugo Lloris najprv chytil, ale musela sa opakovať?",
             "optionsh": ["Kane", "Mbappé", "Messi", "Lewandowski"],
             "answerh": "Lewandowski",
-            "image": 1,
-            "path": 1
+            "image": 6,
+            "path": "../photos/lloris.jpg"
         }
     ],
     "croatia":[
@@ -145,7 +145,7 @@
             "optionsh": ["Dubrovník", "Záhreb", "Zadar", "Split"],
             "answerh": "Split",
             "image": 1,
-            "path": 1
+            "path": "../photos/vlasic.jpg"
         },
         {
             "name": "Lovro Majer",
@@ -155,8 +155,8 @@
             "hard": "Proti akému tímu premenil Lovro Majer svoju penaltu?",
             "optionsh": ["Japonsko", "Argentína", "Maroko", "Brazília"],
             "answerh": "Brazília",
-            "image": 1,
-            "path": 1
+            "image": 2,
+            "path": "../photos/majer.jpg"
         },
         {
             "name": "Luka Modrić",
@@ -166,8 +166,8 @@
             "hard": "V ktorom roku získal Luka Modrić ocenenie Ballon D'Or?",
             "optionsh": ["2016", "2020", "2022", "2018"],
             "answerh": "2018",
-            "image": 1,
-            "path": 1
+            "image": 3,
+            "path": "../photos/modric.jpg"
         },
         {
             "name": "Mislav Oršić",
@@ -177,8 +177,8 @@
             "hard": "Aká je silnejšie noha Mislava Oršića?",
             "optionsh": ["Pravá", "Ľavá", "Ani jedna", "Obidve"],
             "answerh": "Obidve",
-            "image": 1,
-            "path": 1
+            "image": 4,
+            "path": "../photos/orsic.jpg"
         },
         {
             "name": "Ivan Perišić",
@@ -188,8 +188,8 @@
             "hard": "Koľko reprezentačných zápasov odohral Ivan Perišić za Chorvátsko?",
             "optionsh": ["101", "149", "80", "123"],
             "answerh": "123",
-            "image": 1,
-            "path": 1
+            "image": 5,
+            "path": "../photos/perisic.jpg"
         },
         {
             "name": "Dominik Livaković",
@@ -199,8 +199,8 @@
             "hard": "Po zápase proti ktorému tímu získal Dominik Livaković cenu hráča zápasu?",
             "optionsh": ["Belgicko", "Brazília", "Kanada", "Japonsko"],
             "answerh": "Japonsko",
-            "image": 1,
-            "path": 1
+            "image": 6,
+            "path": "../photos/livakovic.jpg"
         }
     ],
     "morocco":[
@@ -213,7 +213,7 @@
             "optionsh": ["Nürnberg II", "Huddersfield Town", "Paderborn", "Siegen Sportfreunde"],
             "answerh": "Siegen Sportfreunde",
             "image": 1,
-            "path": 1
+            "path": "../photos/sabiri.jpg"
         },
         {
             "name": "Hakim Ziyech",
@@ -223,8 +223,8 @@
             "hard": "V ktorej sezóne skóroval Hakim Ziyech najviac gólov za Ajax Amsterdam?",
             "optionsh": ["2016/17", "2017/18", "2019/20", "2018/19"],
             "answerh": "2018/19",
-            "image": 1,
-            "path": 1
+            "image": 2,
+            "path": "../photos/ziyech.jpg"
         },
         {
             "name": "Badr Benoun",
@@ -234,8 +234,8 @@
             "hard": "V akom veku debutoval Badr Benoun za národný tím?",
             "optionsh": ["19", "16", "21", "23"],
             "answerh": "23",
-            "image": 1,
-            "path": 1
+            "image": 3,
+            "path": "../photos/benoun.jpg"
         },
         {
             "name": "Achraf Hakimi",
@@ -245,8 +245,8 @@
             "hard": "Aké zviera napodobnil Achraf Hakimi po víťaznom góle v penaltovom rozstrele proti Španielsku?",
             "optionsh": ["Tiger", "Kengura", "Lev", "Tučniak"],
             "answerh": "Tučniak",
-            "image": 1,
-            "path": 1
+            "image": 4,
+            "path": "../photos/hakimi.jpg"
         },
         {
             "name": "Sofyan Amrabat",
@@ -256,8 +256,8 @@
             "hard": "Koľko krát sa stal Sofyan Amrabat víťazom Holandského Super Poháru počas pôsobenia vo Feyenoorde?",
             "optionsh": ["1", "0", "3", "2"],
             "answerh": "2",
-            "image": 1,
-            "path": 1
+            "image": 5,
+            "path": "../photos/amrabat.jpg"
         },
         {
             "name": "Yassine Bounou",
@@ -267,8 +267,8 @@
             "hard": "V akom štáte sa narodil Yassine Bounou?",
             "optionsh": ["Maroko", "Španielsko", "Portugalsko", "Kanada"],
             "answerh": "Kanada",
-            "image": 1,
-            "path": 1
+            "image": 6,
+            "path": "../photos/bounou.jpg"
         }
     ]
 }
