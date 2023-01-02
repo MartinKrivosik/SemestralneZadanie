@@ -1,0 +1,274 @@
+{
+    "argentina":[
+        {
+            "name": "Lionel Messi",
+            "easy": "Za aký klub hrá Lionel Messi?",
+            "optionse": ["Barcelona", "Inter Miami", "PSV", "PSG"],
+            "answere": "PSG",
+            "hard": "Koľko ocenení Ballon D'Or získal Lionel Messi?",
+            "optionsh": ["6", "8", "5", "7"],
+            "answerh": "7",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Paulo Dybala",
+            "easy": "Za aký klub hrá Paulo Dybala?",
+            "optionse": ["Juventus", "Lazio", "Atalanta", "AS Roma"],
+            "answere": "AS Roma",
+            "hard": "V akom veku skóroval Paulo Dybala svoj prvý gól v Serie A?",
+            "optionsh": ["20", "16", "19", "18"],
+            "answerh": "18",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Leandro Paredes",
+            "easy": "Za aký klub hrá Leandro Paredes?",
+            "optionse": ["PSG", "Boca Juniors", "Zenit", "Juventus"],
+            "answere": "Juventus",
+            "hard": "Koľko žltých kariet získal Leandro Paredes za svoju klubovú kariéru?",
+            "optionsh": ["87", "100", "112", "95"],
+            "answerh": "95",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Gonzalo Montiel",
+            "easy": "Za aký klub hrá Gonzalo Montiel?",
+            "optionse": ["River Plate", "Valencia", "Villareal", "Sevilla"],
+            "answere": "Sevilla",
+            "hard": "Na akej pozícii hrá Gonzalo Montiel?",
+            "optionsh": ["Ľavý obranca", "Lavý záložník", "Pravý záložník", "Pravý obranca"],
+            "answerh": "Pravý obranca",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Enzo Fernández",
+            "easy": "Za aký klub hrá Enzo Fernández?",
+            "optionse": ["Liverpool", "Manchester United", "Porto", "Benfica"],
+            "answere": "Benfica",
+            "hard": "Akú približnú prestupovú cenu má Enzo Fernández?",
+            "optionsh": ["25 mil.€", "55 mil.€", "100 mil.€", "35 mil.€"],
+            "answerh": "35 mil.€",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Emiliano Martínez",
+            "easy": "Za aký klub hrá Emiliano Martínez?",
+            "optionse": ["Arsenal", "Everton", "Inter Milan", "Aston Villa"],
+            "answere": "Aston Villa",
+            "hard": "V koľkých zápasoch v Premier League si Emiliano Martínez udržal čisté konto?",
+            "optionsh": ["9", "8", "5", "3"],
+            "answerh": "3",
+            "image": 1,
+            "path": 1
+        }
+    ],
+    "france":[
+        {
+            "name": "Kylian Mbappé",
+            "easy": "Za aký klub hrá Kylian Mbappé?",
+            "optionse": ["AS Monaco", "Real Madrid", "Newcastle", "PSG"],
+            "answere": "PSG",
+            "hard": "Ako sa volá brat Kyliana Mbappého?",
+            "optionsh": ["Leonardo", "Hugo", "Olivier", "Ethan"],
+            "answerh": "Ethan",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Kingsley Coman",
+            "easy": "Za aký klub hrá Kingsley Coman?",
+            "optionse": ["PSG", "Borussia Dortmund", "Juventus", "Bayern München"],
+            "answere": "Bayern München",
+            "hard": "V akej minúte skóroval Kingsley Coman jediný, ale víťazný gól vo finále Champions League proti PSG?",
+            "optionsh": ["36", "90+2", "73", "59"],
+            "answerh": "59",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Aurélien Tchouaméni",
+            "easy": "Za aký klub hrá Aurélien Tchouaméni?",
+            "optionse": ["AS Monaco", "Atletico Madrid", "PSG", "Real Madrid"],
+            "answere": "Real Madrid",
+            "hard": "V akom roku sa narodil Aurélien Tchouaméni?",
+            "optionsh": ["2001", "1998", "2004", "2000"],
+            "answerh": "2000",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Randal Kolo Muani",
+            "easy": "Za aký klub hrá Randal Kolo Muani?",
+            "optionse": ["WfL Wolfsburg", "Schalke 04", "SC Freiburg", "Eintracht Frankfurt"],
+            "answere": "Eintracht Frankfurt",
+            "hard": "Ktorý štát má Randal Kolo Muani možnosť reprezentovať okrem Francúzska?",
+            "optionsh": ["Kongo", "Zambia", "Ghana", "Konžská demokratická republika"],
+            "answerh": "Konžská demokratická republika",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Marcus Thuram",
+            "easy": "Za aký klub hrá Marcus Thuram?",
+            "optionse": ["RB Leipzig", "VfB Stuttgart", "Bayer 04 Leverkusen", "B. Mönchengladbach"],
+            "answere": "B. Mönchengladbach",
+            "hard": "Ako sa volá známy futbalista a otec Marcusa Thurama?",
+            "optionsh": ["Kylian", "Zinedine", "Clemént", "Lilian"],
+            "answerh": "Lilian",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Hugo Lloris",
+            "easy": "Za aký klub hrá Hugo Lloris?",
+            "optionse": ["Chelsea", "Lyon", "Fulham", "Tottenham"],
+            "answere": "Tottenham",
+            "hard": "Koho penaltu na Majstovstvách sveta 2022 Hugo Lloris najprv chytil, ale musela sa opakovať?",
+            "optionsh": ["Kane", "Mbappé", "Messi", "Lewandowski"],
+            "answerh": "Lewandowski",
+            "image": 1,
+            "path": 1
+        }
+    ],
+    "croatia":[
+        {
+            "name": "Nikola Vlašić",
+            "easy": "Za aký klub hrá Nikola Vlašić?",
+            "optionse": ["West Ham", "CSKA Moskva", "Hajduk Split", "Torino"],
+            "answere": "Torino",
+            "hard": "V akom meste sa narodil Nikola Vlašić?",
+            "optionsh": ["Dubrovník", "Záhreb", "Zadar", "Split"],
+            "answerh": "Split",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Lovro Majer",
+            "easy": "Za aký klub hrá Lovro Majer?",
+            "optionse": ["Dinamo Zagreb", "Nantes", "LOSC Lille", "Stade Rennais"],
+            "answere": "Stade Rennais",
+            "hard": "Proti akému tímu premenil Lovro Majer svoju penaltu?",
+            "optionsh": ["Japonsko", "Argentína", "Maroko", "Brazília"],
+            "answerh": "Brazília",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Luka Modrić",
+            "easy": "Za aký klub hrá Luka Modrić?",
+            "optionse": ["Tottenham", "Dinamo Zagreb", "Manchester City", "Real Madrid"],
+            "answere": "Real Madrid",
+            "hard": "V ktorom roku získal Luka Modrić ocenenie Ballon D'Or?",
+            "optionsh": ["2016", "2020", "2022", "2018"],
+            "answerh": "2018",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Mislav Oršić",
+            "easy": "Za aký klub hrá Mislav Oršić?",
+            "optionse": ["Ulsan Hyundai", "Spezia", "Hajduk Split", "Dinamo Zagreb"],
+            "answere": "Dinamo Zagreb",
+            "hard": "Aká je silnejšie noha Mislava Oršića?",
+            "optionsh": ["Pravá", "Ľavá", "Ani jedna", "Obidve"],
+            "answerh": "Obidve",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Ivan Perišić",
+            "easy": "Za aký klub hrá Ivan Perišič?",
+            "optionse": ["Inter Milan", "AC Milano", "Bayern München", "Tottenham"],
+            "answere": "Tottenham",
+            "hard": "Koľko reprezentačných zápasov odohral Ivan Perišić za Chorvátsko?",
+            "optionsh": ["101", "149", "80", "123"],
+            "answerh": "123",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Dominik Livaković",
+            "easy": "Za aký klub hrá Dominik Livaković?",
+            "optionse": ["Hajduk Split", "Lokomotiva Zagreb", "Osijek", "Dinamo Zagreb"],
+            "answere": "Dinamo Zagreb",
+            "hard": "Po zápase proti ktorému tímu získal Dominik Livaković cenu hráča zápasu?",
+            "optionsh": ["Belgicko", "Brazília", "Kanada", "Japonsko"],
+            "answerh": "Japonsko",
+            "image": 1,
+            "path": 1
+        }
+    ],
+    "morocco":[
+        {
+            "name": "Abdelhamid Sabiri",
+            "easy": "Za aký klub hrá Abdelhamid Sabiri?",
+            "optionse": ["Empoli", "Salernitana", "Hellas", "Sampdoria"],
+            "answere": "Sampdoria",
+            "hard": "Za aký klub skóroval Abdelhamid Sabiri svoj prvý hat-trick?",
+            "optionsh": ["Nürnberg II", "Huddersfield Town", "Paderborn", "Siegen Sportfreunde"],
+            "answerh": "Siegen Sportfreunde",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Hakim Ziyech",
+            "easy": "Za aký klub hrá Hakim Ziyech?",
+            "optionse": ["Ajax", "Twente", "Brentford", "Chelsea"],
+            "answere": "Chelsea",
+            "hard": "V ktorej sezóne skóroval Hakim Ziyech najviac gólov za Ajax Amsterdam?",
+            "optionsh": ["2016/17", "2017/18", "2019/20", "2018/19"],
+            "answerh": "2018/19",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Badr Benoun",
+            "easy": "Za aký klub hrá Badr Benoun?",
+            "optionse": ["Al-Ahly", "Al Sadd", "Al Shamal", "Qatar SC"],
+            "answere": "Qatar SC",
+            "hard": "V akom veku debutoval Badr Benoun za národný tím?",
+            "optionsh": ["19", "16", "21", "23"],
+            "answerh": "23",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Achraf Hakimi",
+            "easy": "Za aký klub hrá Achraf Hakimi?",
+            "optionse": ["Inter Milan", "Real Madrid", "Borussia Dortmund", "PSG"],
+            "answere": "PSG",
+            "hard": "Aké zviera napodobnil Achraf Hakimi po víťaznom góle v penaltovom rozstrele proti Španielsku?",
+            "optionsh": ["Tiger", "Kengura", "Lev", "Tučniak"],
+            "answerh": "Tučniak",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Sofyan Amrabat",
+            "easy": "Za aký klub hrá Sofyan Amrabat?",
+            "optionse": ["Club Brugge", "Hellas", "Feyenoord", "Fiorentina"],
+            "answere": "Fiorentina",
+            "hard": "Koľko krát sa stal Sofyan Amrabat víťazom Holandského Super Poháru počas pôsobenia vo Feyenoorde?",
+            "optionsh": ["1", "0", "3", "2"],
+            "answerh": "2",
+            "image": 1,
+            "path": 1
+        },
+        {
+            "name": "Yassine Bounou",
+            "easy": "Za aký klub hrá Yassine Bounou?",
+            "optionse": ["Girona", "Zaragoza", "Atletic Bilbao", "Sevilla"],
+            "answere": "Sevilla",
+            "hard": "V akom štáte sa narodil Yassine Bounou?",
+            "optionsh": ["Maroko", "Španielsko", "Portugalsko", "Kanada"],
+            "answerh": "Kanada",
+            "image": 1,
+            "path": 1
+        }
+    ]
+}
