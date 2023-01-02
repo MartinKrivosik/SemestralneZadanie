@@ -10,6 +10,10 @@ let enemyTeam;
 
 if (document.body.className == "setup"){
 
+	const conBtn = document.getElementById("continue");
+	let count = 0;
+	conBtn.disabled = true;
+
 	const pteam = document.getElementById("playerteam");
 	const oteam = document.getElementById("opponentteam");
 	const holders = document.querySelectorAll('.player h3');
@@ -30,7 +34,13 @@ if (document.body.className == "setup"){
 			if(el[j].hasAttribute("draggable")){
 				el[j].setAttribute("draggable", true);
 			}
-        }	
+        }
+		count += 1;	
+		if(count >= 3){
+			conBtn.disabled = false;
+		} else{
+			conBtn.disabled = true;
+		}
 		localStorage.setItem("playerTeam", playerTeam);	
 	});
 	
@@ -43,12 +53,24 @@ if (document.body.className == "setup"){
 			pteam[i].disabled = false;
 		  }
 		}
+		count += 1;
+		if(count >= 3){
+			conBtn.disabled = false;
+		} else{
+			conBtn.disabled = true;
+		}
 		localStorage.setItem("enemyTeam", enemyTeam);
 	});
 	
 	diff.addEventListener("change", function(){
   		difficulty = diff.value;
-		localStorage.setItem("difficulty", difficulty);
+		count += 1;
+		if(count >= 3){
+			conBtn.disabled = false;
+		} else{
+			conBtn.disabled = true;
+		}
+		localStorage.setItem("difficulty", difficulty);	
 	})
 
 	var dragSrcEl = null;
