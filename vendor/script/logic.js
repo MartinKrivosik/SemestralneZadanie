@@ -207,7 +207,6 @@ if (document.body.className == "game"){
 					currPlayer = cP
 				}
 			}
-			//question.textContent = players[playerTeam][playerNumber][difficulty]
 		}
 		else{
 			activeA[0].src = "../photos/glove.png"
@@ -331,7 +330,7 @@ if (document.body.className == "game"){
 				playerWas = false
 			}
 		}
-		if(turnNumber == 5){
+		if(turnNumber == 6){
 			setTimeout(endGame, 500)
 		}
 		else{
@@ -371,7 +370,7 @@ if (document.body.className == "game"){
 				playerWas = false
 			}
 		}
-		if(turnNumber == 5){
+		if(turnNumber == 6){
 			setTimeout(endGame, 500)
 		}
 		else{
@@ -411,7 +410,7 @@ if (document.body.className == "game"){
 				playerWas = false
 			}
 		}
-		if(turnNumber == 5){
+		if(turnNumber == 6){
 			setTimeout(endGame, 500)
 		}
 		else{
@@ -451,7 +450,7 @@ if (document.body.className == "game"){
 				playerWas = false
 			}
 		}
-		if(turnNumber == 5){
+		if(turnNumber == 6){
 			setTimeout(endGame, 500)
 		}
 		else{
