@@ -1,5 +1,9 @@
 /* MENU STYLE */
 
+body{
+    background: #e0ffcd; 
+}
+
 .title{
     padding-top: 10vh;
 }
@@ -16,6 +20,22 @@
     height: 10vh;
     width: 30vw;
     border-radius: 5px;
+    background: #ffebbb;
+}
+.start button:hover,
+.rules button:hover{
+    background: #fdffcd;
+}
+
+/* RULES STYLE */
+
+.rules{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 10vh;
 }
 
 /* SETUP STYLE */
@@ -26,6 +46,7 @@
     display: block;
     margin: 0 auto;
     border-radius: 5px;
+    background: #ffebbb;
 }
 
 .player{
@@ -34,10 +55,13 @@
     max-width: 300px;
     cursor: move;
     border-radius: 5px;
+    background: #ffebbb;
+    border: 1px solid #fdffcd;
 }
 
 .player.over{
-    border: 1px dotted black;
+    border: 1px solid #ffcab0;
+    background: #fdffcd;
 }
 
 [draggable] {
@@ -56,6 +80,7 @@ label{
     height: 5vh;
     width: 20vw;
     border-radius: 5px;
+    background: #ffebbb;
 }
 
 /* GAME STYLE*/
@@ -86,10 +111,11 @@ label{
 
 /* Question */
 #question{
-    border: 1px solid black;
+    border: 5px solid black;
     height: 40vh;
     display: table;
     border-radius: 5px;
+    background: #ffebbb;
 }
 
 #question h2 {
@@ -103,4 +129,5 @@ label{
     height: 10vh;
     width: 30vw;
     border-radius: 5px;
+    background: #ffebbb;
 }
