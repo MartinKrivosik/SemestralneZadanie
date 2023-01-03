@@ -19,6 +19,13 @@ if (document.body.className == "setup"){
 	let el = document.getElementsByClassName("player");
 	const diff = document.getElementById("difficulty");
 	let hEl = document.querySelectorAll("h3");
+
+	window.onpageshow = function(){
+		pteam.value = "none";
+		oteam.value = "none";
+		diff.value = "none";
+		conBtn.disabled = true;
+	};
 	
 	pteam.addEventListener("change", function() {
 		playerTeam = pteam.value;
