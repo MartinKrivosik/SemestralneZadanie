@@ -291,10 +291,10 @@ if (document.body.className == "game"){
 		answerC.textContent = shuffledArray[2]
 		answerD.textContent = shuffledArray[3]
 	
-		answerA.style.background = "transparent"
-		answerB.style.background = "transparent"
-		answerC.style.background = "transparent"
-		answerD.style.background = "transparent"
+		answerA.style.background = "#ffebbb"
+		answerB.style.background = "#ffebbb"
+		answerC.style.background = "#ffebbb"
+		answerD.style.background = "#ffebbb"
 
 		answerA.style.border = "1px solid black"
 		answerB.style.border = "1px solid black"

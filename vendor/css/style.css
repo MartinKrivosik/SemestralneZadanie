@@ -93,6 +93,7 @@ label{
     border-radius: 50%;
     border: 1px solid black;
     font-size: 16px;
+    background-color: #ffebbb;
 }
 
 .TeamAActive, .TeamBActive, .TeamALogo, .TeamBLogo{
