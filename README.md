@@ -1,6 +1,6 @@
 # SemestralneZadanie
 Dominik:
-  - - [ ] menu buttony na presmerovanie
+  - - [x] menu buttony na presmerovanie
   - - [x] Setup page:
     - - [x] select1 - zobrazia sa hraci
     - - [x] select2 - ulozi sa super
@@ -18,5 +18,5 @@ Krivko:
   - - [x] modal:
     - - [x] ak remiza: restart alebo koniec
     - - [x] ak W/L - koniec
-  - - [ ] PWA
+  - - [x] PWA
     
