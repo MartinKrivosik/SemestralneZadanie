@@ -281,9 +281,6 @@ if (document.body.className == "game"){
 		answerD.disabled = false
 
 		disabledNumber = 0
-
-		localStorage.setItem("score1", scoreA.textContent)
-		console.log(score1)
 	
 	}
 	
@@ -316,7 +313,6 @@ if (document.body.className == "game"){
 		}
 		text.appendChild(score)
 		text.appendChild(para)
-		localStorage.clear()
 		modal.show()
 	}
 
