@@ -36,12 +36,13 @@ if (document.body.className == "setup"){
 				el[j].setAttribute("draggable", true);
 			}
         }
-		count += 1;	
-		if(count >= 3){
+		if (pteam.value != "none" && oteam.value != "none" && diff.value != "none"){
 			conBtn.disabled = false;
-		} else{
+		}
+		else{
 			conBtn.disabled = true;
 		}
+
 		localStorage.setItem("playerTeam", playerTeam);	
 	});
 	
@@ -54,10 +55,10 @@ if (document.body.className == "setup"){
 			pteam[i].disabled = false;
 		  }
 		}
-		count += 1;
-		if(count >= 3){
+		if (pteam.value != "none" && oteam.value != "none" && diff.value != "none"){
 			conBtn.disabled = false;
-		} else{
+		}
+		else{
 			conBtn.disabled = true;
 		}
 		localStorage.setItem("enemyTeam", enemyTeam);
@@ -65,10 +66,10 @@ if (document.body.className == "setup"){
 	
 	diff.addEventListener("change", function(){
   		difficulty = diff.value;
-		count += 1;
-		if(count >= 3){
+		if (pteam.value != "none" && oteam.value != "none" && diff.value != "none"){
 			conBtn.disabled = false;
-		} else{
+		}
+		else{
 			conBtn.disabled = true;
 		}
 		localStorage.setItem("difficulty", difficulty);	
@@ -280,6 +281,9 @@ if (document.body.className == "game"){
 		answerD.disabled = false
 
 		disabledNumber = 0
+
+		localStorage.setItem("score1", scoreA.textContent)
+		console.log(score1)
 	
 	}
 	
@@ -312,6 +316,7 @@ if (document.body.className == "game"){
 		}
 		text.appendChild(score)
 		text.appendChild(para)
+		localStorage.clear()
 		modal.show()
 	}
 
