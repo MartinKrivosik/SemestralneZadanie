@@ -93,7 +93,7 @@ if (document.body.className == "setup"){
 				playerList.insertBefore(namesPos[i], namesPos[index]);
 			}
 		}
-		localStorage.setItem("playersOrder", values);
+		localStorage.setItem("playersOrderAccelerometer", values);
   	});
 
 	let dragSrcEl = null;
@@ -145,7 +145,7 @@ if (document.body.className == "setup"){
 		for(let i = 0; i < names.length; i++){
 			tab.push(names[i].innerHTML);
 		}
-		localStorage.setItem("playersOrder", tab);
+		localStorage.setItem("playersOrderDragNDrop", tab);
 		return false;
 	}
 	
