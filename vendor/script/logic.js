@@ -16,7 +16,7 @@ if (document.body.className == "setup"){
 
 	const pteam = document.getElementById("playerteam");
 	const oteam = document.getElementById("opponentteam");
-	const holders = document.querySelectorAll('.player h3');
+	const holders = document.querySelectorAll(".player h3");
 	const el = document.getElementsByClassName("player");
 	const diff = document.getElementById("difficulty");
 	
@@ -73,18 +73,22 @@ if (document.body.className == "setup"){
 		localStorage.setItem("difficulty", difficulty);	
 	})
 
-	window.addEventListener('deviceorientation', function(event) {
+	window.addEventListener("deviceorientation", function(event) {
 		let z = event.alpha;
 		let playerList = document.getElementById("list");
-		var namesPos = playerList.getElementsByTagName("li");
-		let values = Array.from(namesPos, item => item.textContent);
+		let namesPos = playerList.getElementsByTagName("li");
+		var names = document.querySelectorAll(".list .player h3")
+		var values = [];
+
+		for(let i = 0; i < names.length; i++){
+			values.push(names[i].innerHTML);
+		}
+
 		if (z > 120 || z < 60 ) {	
 			for (let i = values.length - 1; i > 0; i--) {
 				let index = Math.floor(Math.random() * (i + 1));
 				[values[i], values[index]] = [values[index], values[i]];
-
-				// Swap the li elements at the current and random indexes
-				list.insertBefore(namesPos[i], namesPos[index]);
+				playerList.insertBefore(namesPos[i], namesPos[index]);
 			}
 		}
 		localStorage.setItem("playersOrder", values);
@@ -93,29 +97,28 @@ if (document.body.className == "setup"){
 	var dragSrcEl = null;
 
 	function handleDragStart(e) {
-		console.log(this.innerHTML + "0")
-		this.style.opacity = '0.4';
+		this.style.opacity = "0.5";
 
 		dragSrcEl = this;
 
 		e.dataTransfer.effectAllowed = "move";
-		e.dataTransfer.setData("text/html", this.innerHTML);
+		e.dataTransfer.setData("name", this.innerHTML);
 	}
 	
 	function handleDragOver(e) {
 		e.preventDefault();
 		
-		e.dataTransfer.dropEffect = 'move';
+		e.dataTransfer.dropEffect = "move";
 			
 		return false;
 	}
 	
 	function handleDragEnter(e) {
-		this.classList.add('over');
+		this.classList.add("over");
 	}
 	
 	function handleDragLeave(e) {
-		this.classList.remove('over');
+		this.classList.remove("over");
 	}
 
 	function handleDrop(e) {
@@ -123,7 +126,7 @@ if (document.body.className == "setup"){
 		  
 		if (dragSrcEl != this) {
 			dragSrcEl.innerHTML = this.innerHTML;
-			this.innerHTML = e.dataTransfer.getData('text/html');
+			this.innerHTML = e.dataTransfer.getData("name");
 		}
 
 		var names = document.querySelectorAll(".list .player h3")
