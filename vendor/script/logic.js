@@ -47,8 +47,13 @@ if (document.body.className == "setup"){
 		for(let i = 0; i < names.length; i++){
 			values.push(names[i].innerHTML);
 		}
-		localStorage.setItem("playersOrderBasic", values);
-		console.log(values);
+		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+			// true for mobile device
+			localStorage.setItem("playersOrderAccelerometer", values);
+		}
+		else{
+			localStorage.setItem("playersOrderDragNDrop", values);
+		}
 
 		localStorage.setItem("playerTeam", playerTeam);
 			
@@ -157,7 +162,6 @@ if (document.body.className == "setup"){
 		for(let i = 0; i < names.length; i++){
 			tab.push(names[i].innerHTML);
 		}
-		console.log(tab)
 		localStorage.setItem("playersOrderDragNDrop", tab);
 		return false;
 	}
@@ -189,7 +193,7 @@ if (document.body.className == "game"){
 	let order
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 		// true for mobile device
-		order = localStorage.getItem("playersOrderAccelerometer")
+		order = localStorage.getItem("playersOrderAccelerometer").split(',')
 	}else{
 		// false for not mobile device
 		order = localStorage.getItem("playersOrderDragNDrop").split(',')
