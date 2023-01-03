@@ -15,26 +15,30 @@
 </head>
 <body class="index">
 
+    <div class="title text-center">
+        <h1>Penalty<br>
+        Quiz</h1>
+    </div>
 
-<div class="container text-center">
-    <div class="row align-items-end">
-        <div class="col start p-3">
-            <button type="button" class="startBtn" onclick="location.href='vendor/web/setup.html'">Štart</button>
+    <div class="container text-center">
+        <div class="row align-items-end">
+            <div class="col start p-3">
+                <button type="button" class="startBtn" onclick="location.href='vendor/web/setup.html'">Štart</button>
+            </div>
+        </div>
+        <div class="row align-items-start">
+            <div class="col rules p-3">
+                <button type="button" class="rulesBtn" onclick="location.href='vendor/web/rules.html'">Návod</button>
+            </div>
         </div>
     </div>
-    <div class="row align-items-start">
-        <div class="col rules p-3">
-            <button type="button" class="rulesBtn" onclick="location.href='vendor/web/rules.html'">Návod</button>
-        </div>
-    </div>
-</div>
 
-<script type="module" src="vendor/script/logic.js"></script>
-<script>
-    if('serviceWorker' in navigator){
-        navigator.serviceWorker.register('service-worker.js')
-    }
-</script>
+    <script type="module" src="vendor/script/logic.js"></script>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('service-worker.js')
+        }
+    </script>
 
 </body>
 </html>
