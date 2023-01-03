@@ -8,6 +8,10 @@ body{
     padding-top: 10vh;
 }
 
+h1{
+    font-weight: 600;
+}
+
 .container .row{
     height: 30vh;
 }
@@ -130,5 +134,4 @@ label{
     height: 10vh;
     width: 30vw;
     border-radius: 5px;
-    background: #ffebbb;
 }
