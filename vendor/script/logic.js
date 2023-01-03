@@ -172,8 +172,19 @@ if (document.body.className == "game"){
 	playerTeam = localStorage.getItem("playerTeam");
 	enemyTeam = localStorage.getItem("enemyTeam");
 	//premenuj si to podla potreby
-	let order = localStorage.getItem("playersOrder").split(',');
+
+	let order
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+		// true for mobile device
+		order = localStorage.getItem("playersOrderAccelerometer")
+		console.log(order)
+	}else{
+		// false for not mobile device
+		order = localStorage.getItem("playersOrderDragNDrop").split(',')
+	}
+	
 	order.push(players[playerTeam][5].name)
+	console.log(order)
 
 	const hintButton = document.querySelectorAll(".hint")
 
