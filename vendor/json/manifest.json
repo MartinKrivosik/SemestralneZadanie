@@ -1,7 +1,8 @@
 {
     "name": "Penalty Quiz",
     "short_name": "PenQuiz",
-    "start_url" : "../index.html",
+    "start_url" : "../../index.html",
+    "id": "../../index.html",
     "icons": [
         {
           "src": "../icons/manifest-icon-192.maskable.png",

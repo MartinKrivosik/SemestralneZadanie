@@ -83,26 +83,30 @@ if (document.body.className == "setup"){
 		localStorage.setItem("difficulty", difficulty);	
 	})
 
-	window.addEventListener("deviceorientation", function(event) {
-		let z = event.alpha;
-		let playerList = document.getElementById("list");
-		let namesPos = playerList.getElementsByTagName("li");
-		var names = document.querySelectorAll(".list .player h3")
-		var values = [];
-
-		for(let i = 0; i < names.length; i++){
-			values.push(names[i].innerHTML);
-		}
-
-		if (z > 120 || z < 60 ) {	
-			for (let i = values.length - 1; i > 0; i--) {
-				let index = Math.floor(Math.random() * (i + 1));
-				[values[i], values[index]] = [values[index], values[i]];
-				playerList.insertBefore(namesPos[i], namesPos[index]);
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+		// true for mobile device
+		window.addEventListener("deviceorientation", function(event) {
+			let z = event.alpha;
+			let playerList = document.getElementById("list");
+			let namesPos = playerList.getElementsByTagName("li");
+			var names = document.querySelectorAll(".list .player h3")
+			var values = [];
+	
+			for(let i = 0; i < names.length; i++){
+				values.push(names[i].innerHTML);
 			}
-		}
-		localStorage.setItem("playersOrderAccelerometer", values);
-  	});
+	
+			if (z > 120 || z < 60 ) {	
+				for (let i = values.length - 1; i > 0; i--) {
+					let index = Math.floor(Math.random() * (i + 1));
+					[values[i], values[index]] = [values[index], values[i]];
+					playerList.insertBefore(namesPos[i], namesPos[index]);
+				}
+			}
+			localStorage.setItem("playersOrderAccelerometer", values);
+		  });
+	}
+	
 
 	let dragSrcEl = null;
 
@@ -153,6 +157,7 @@ if (document.body.className == "setup"){
 		for(let i = 0; i < names.length; i++){
 			tab.push(names[i].innerHTML);
 		}
+		console.log(tab)
 		localStorage.setItem("playersOrderDragNDrop", tab);
 		return false;
 	}
@@ -185,14 +190,12 @@ if (document.body.className == "game"){
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 		// true for mobile device
 		order = localStorage.getItem("playersOrderAccelerometer")
-		console.log(order)
 	}else{
 		// false for not mobile device
 		order = localStorage.getItem("playersOrderDragNDrop").split(',')
 	}
 	
 	order.push(players[playerTeam][5].name)
-	console.log(order)
 
 	const hintButton = document.querySelectorAll(".hint")
 
