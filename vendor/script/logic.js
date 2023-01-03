@@ -42,8 +42,16 @@ if (document.body.className == "setup"){
 		else{
 			conBtn.disabled = true;
 		}
+		var values = [];
+		var names = document.querySelectorAll(".list .player h3")
+		for(let i = 0; i < names.length; i++){
+			values.push(names[i].innerHTML);
+		}
+		localStorage.setItem("playersOrderBasic", values);
+		console.log(values);
 
-		localStorage.setItem("playerTeam", playerTeam);	
+		localStorage.setItem("playerTeam", playerTeam);
+			
 	});
 	
 	oteam.addEventListener("change", function() {
