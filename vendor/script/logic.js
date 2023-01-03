@@ -157,20 +157,18 @@ if (document.body.className == "setup"){
 
 ////////////////////////////// GAME LOGIC //////////////////////////////
 
-let turn = Math.random() >= 0.5 ? "player" : "enemy";
-let playerNumber = 0;
-let turnNumber = 0;
-
-difficulty = localStorage.getItem("difficulty");
-playerTeam = localStorage.getItem("playerTeam");
-enemyTeam = localStorage.getItem("enemyTeam");
-//premenuj si to podla potreby
-let order = localStorage.getItem("playersOrder").split(',');
-order.push(players[playerTeam][5].name)
-console.log(order)
-
 
 if (document.body.className == "game"){
+	let turn = Math.random() >= 0.5 ? "player" : "enemy";
+	let playerNumber = 0;
+	let turnNumber = 0;
+	
+	difficulty = localStorage.getItem("difficulty");
+	playerTeam = localStorage.getItem("playerTeam");
+	enemyTeam = localStorage.getItem("enemyTeam");
+	//premenuj si to podla potreby
+	let order = localStorage.getItem("playersOrder").split(',');
+	order.push(players[playerTeam][5].name)
 
 	const hintButton = document.querySelectorAll(".hint")
 
