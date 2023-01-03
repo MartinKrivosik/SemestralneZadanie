@@ -16,11 +16,11 @@ if (document.body.className == "setup"){
 
 	const pteam = document.getElementById("playerteam");
 	const oteam = document.getElementById("opponentteam");
-	const holders = document.querySelectorAll(".player h3");
-	const el = document.getElementsByClassName("player");
+	let el = document.getElementsByClassName("player");
 	const diff = document.getElementById("difficulty");
+	let hEl = document.querySelectorAll("h3");
 	
-	pteam.addEventListener('change', function() {
+	pteam.addEventListener("change", function() {
 		playerTeam = pteam.value;
 		for(let i = 0; i < oteam.length; i++){
 		  if(oteam[i].value == pteam.value){
@@ -30,7 +30,8 @@ if (document.body.className == "setup"){
 		  }
 		}
 		for(let j = 0; j < players[playerTeam].length - 1; j++){
-            holders[j].innerHTML = players[playerTeam][j].name;
+			hEl[j].remove();
+            el[j].innerHTML = "<h3>" + players[playerTeam][j].name + "</h3>";
 			if(el[j].hasAttribute("draggable")){
 				el[j].setAttribute("draggable", true);
 			}
@@ -44,7 +45,7 @@ if (document.body.className == "setup"){
 		localStorage.setItem("playerTeam", playerTeam);	
 	});
 	
-	oteam.addEventListener('change', function() {
+	oteam.addEventListener("change", function() {
 		enemyTeam = oteam.value;
 		for(let i = 0; i < pteam.length; i++){
 		  if(pteam[i].value == oteam.value){
@@ -94,7 +95,7 @@ if (document.body.className == "setup"){
 		localStorage.setItem("playersOrder", values);
   	});
 
-	var dragSrcEl = null;
+	let dragSrcEl = null;
 
 	function handleDragStart(e) {
 		this.style.opacity = "0.5";
@@ -121,6 +122,14 @@ if (document.body.className == "setup"){
 		this.classList.remove("over");
 	}
 
+	function handleDragEnd(e) {
+		this.style.opacity = "1";
+	  
+		items.forEach(function (item) {
+			item.classList.remove("over");
+		});
+	}  
+
 	function handleDrop(e) {
 		e.preventDefault();
 		  
@@ -138,23 +147,15 @@ if (document.body.className == "setup"){
 		localStorage.setItem("playersOrder", tab);
 		return false;
 	}
-
-	function handleDragEnd(e) {
-		this.style.opacity = '1';
-	  
-		items.forEach(function (item) {
-			item.classList.remove('over');
-		});
-	}  
 	
-	let items = document.querySelectorAll('.row .player');
+	let items = document.querySelectorAll("#list .player");
 	items.forEach(function(item) {
-		item.addEventListener('dragstart', handleDragStart, false);
-		item.addEventListener('dragenter', handleDragEnter, false);
-		item.addEventListener('dragover', handleDragOver, false);
-		item.addEventListener('dragleave', handleDragLeave, false);
-		item.addEventListener('drop', handleDrop, false);
-		item.addEventListener('dragend', handleDragEnd, false);
+		item.addEventListener("dragstart", handleDragStart);
+		item.addEventListener("dragenter", handleDragEnter);
+		item.addEventListener("dragover", handleDragOver);
+		item.addEventListener("dragleave", handleDragLeave);
+		item.addEventListener("drop", handleDrop);
+		item.addEventListener("dragend", handleDragEnd);
 	});
 }
 
