@@ -1,7 +1,11 @@
 /* MENU STYLE */
 
+.title{
+    padding-top: 10vh;
+}
+
 .container .row{
-    height: 50vh;
+    height: 30vh;
 }
 
 .rules .row{
@@ -11,6 +15,7 @@
 .start button, .rules button{
     height: 10vh;
     width: 30vw;
+    border-radius: 5px;
 }
 
 /* SETUP STYLE */
@@ -20,6 +25,7 @@
     height: 50px;
     display: block;
     margin: 0 auto;
+    border-radius: 5px;
 }
 
 .player{
@@ -27,6 +33,7 @@
     min-width: 100px;
     max-width: 300px;
     cursor: move;
+    border-radius: 5px;
 }
 
 .player.over{
@@ -48,6 +55,7 @@ label{
 #continue{
     height: 5vh;
     width: 20vw;
+    border-radius: 5px;
 }
 
 /* GAME STYLE*/
@@ -64,6 +72,7 @@ label{
 
 .TeamAActive, .TeamBActive, .TeamALogo, .TeamBLogo{
     max-width: 15vw;
+    border-radius: 5px;
 }
 
 #scoreboard{
@@ -80,6 +89,7 @@ label{
     border: 1px solid black;
     height: 40vh;
     display: table;
+    border-radius: 5px;
 }
 
 #question h2 {
@@ -92,4 +102,5 @@ label{
 .answers button{
     height: 10vh;
     width: 30vw;
+    border-radius: 5px;
 }
