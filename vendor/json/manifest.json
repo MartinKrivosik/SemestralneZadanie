@@ -1,6 +1,6 @@
 {
-    "name": "Penalties",
-    "short_name": "Pens",
+    "name": "Penalty Quiz",
+    "short_name": "PenQuiz",
     "start_url" : "../index.html",
     "icons": [
         {

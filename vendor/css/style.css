@@ -4,6 +4,10 @@
     height: 50vh;
 }
 
+.rules .row{
+    height: auto;
+}
+
 .start button, .rules button{
     height: 10vh;
     width: 30vw;
